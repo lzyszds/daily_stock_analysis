@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1794824384546,
+  "generatedAt": 1794859834023,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
@@ -7,18 +7,24 @@
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794824384546,
+      "updatedAt": 1794859834023,
       "symbols": [
         "AAPL",
         "APLD",
         "BTC",
         "ETH",
         "MSFT",
-        "MU",
         "NVDA",
         "SNDK",
         "SPCX"
       ]
+    },
+    {
+      "name": "market_review_20261116.md",
+      "path": "market_review_20261116.md",
+      "date": "2026-11-16",
+      "updatedAt": 1794859834023,
+      "symbols": []
     }
   ]
 }

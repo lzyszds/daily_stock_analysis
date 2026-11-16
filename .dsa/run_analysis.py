@@ -4,25 +4,32 @@
 覆盖上游 analysis 执行的入口：python .dsa/run_analysis.py <main.py 原生参数…>
 
 为什么需要这一层：
-- 上游 main.py 的 STOCK_LIST 只认股票，加密货币（BTC/ETH）压根拿不到行情 —— 全链路
-  依赖 data_provider 里「A股 / 港股 / 美股 / 美股指数」四套口径，没有 crypto；
+- 上游 main.py 的 STOCK_LIST 只认股票，加密货币（BTC/ETH）压根拿不到行情 ——
+  全链路依赖 data_provider 里「A股 / 港股 / 美股 / 美股指数」四套口径，没有 crypto；
 - devNotes 的「AI研判」页里，美股和加密货币是同一张自选表，用户不该为此切换两套配置。
 
-做法：先用上游自带的 DataFetcherManager + StockTrendAnalyzer 把加密货币的数据准备好，
-把「现价 / 日线 / 技术指标」写成一份紧凑的行情摘要；上游走完后再把这份摘要追加成一节
-markdown，和其他股票的报告合并进同一份日报、同一份 .dsa/*.md。
+上游实测结论（决定下面所有写法）：
+- 裸 `BTC` 会被当成美股 ticker，拿到的是「Grayscale Bitcoin Mini Trust」（不是币价）
+- `BTCUSD` 会被当成深市股票，六个数据源全部返回空
+- 只有 Yahoo 的 `BTC-USD` 能取到真实币价，它的 normalize 不会把 -USD 当指数后缀丢掉
 
-加密货币没有财报、没有筹码分布，所以这一节只基于价格行为：
-- 独立跑一遍 GeminiAnalyzer（prompt 里明确写「只按价格行为/技术面，别编造基本面」）
-- 模型不可用或返回不可解析时退化成纯技术面摘要，至少不会让整份日报失败
+做法：先把 STOCK_LIST 里的币种摘出来（上游 main.py 会因为 -USD 直接报错），
+用上游自带的 DataFetcherManager + StockTrendAnalyzer 准备好「现价 / 日线 / 技术指标」，
+上游股票跑完后把这一节追加进同一份日报、同一份 .dsa/*.md。
+
+加密货币没有财报、没有筹码分布、没有新闻源，所以这一节只基于价格行为：
+- 单独调一次 GeminiAnalyzer（prompt 里明确写「只按价格行为，禁止编造」）
+- 模型不可用或返回不可解析时退化成纯技术面表格，至少不让整份日报失败
 """
 
 from __future__ import annotations
 
+import json
 import os
 import re
 import subprocess
 import sys
+import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -30,7 +37,6 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-# 和上游一致：引擎内部既 `from src.x` 也 `from data_provider`，两者都在仓库根下
 CRYPTO_SUFFIX = "-USD"
 CRYPTO_LABEL = {
     "BTC": "比特币",
@@ -45,11 +51,14 @@ CRYPTO_LABEL = {
     "TON": "Toncoin",
     "LINK": "Chainlink",
 }
+# 只取 120 根日线：够算 MA60，又不至于让单币种分析拖太久
 BAR_DAYS = 120
+BLOCK_MARKER = "\n---\n\n## ₿ 加密货币研判"
 
 
 def log(msg: str) -> None:
-    print(f"[crypto] {msg}", flush=True)
+    """进度日志写 stderr：stdout 已被上游的报告输出占用。"""
+    print(f"[crypto] {msg}", file=sys.stderr, flush=True)
 
 
 def user_stock_list() -> str:
@@ -64,56 +73,85 @@ def user_stock_list() -> str:
 
 
 def split_stock_list(raw: str) -> tuple[list[str], list[str]]:
-    """把 STOCK_LIST 拆成（股票, 加密货币）；加密货币统一写成裸代码 BTC / ETH。"""
-    from src.services.stock_list_parser import split_stock_list as upstream_split
+    """把 STOCK_LIST 拆成（股票, 加密货币）。
 
+    加密货币接受 BTC / BTCUSD / BTC-USD 三种写法，统一成裸代码 BTC；
+    其余全部交给上游校验（A股、港股、美股、指数、日韩股都由上游的 parser 认）。
+    """
+    stocks: list[str] = []
     coins: list[str] = []
     for item in (raw or "").replace("，", ",").split(","):
-        code = item.strip().upper()
-        if not code:
+        token = item.strip()
+        if not token:
             continue
-        # 明确写成 BTC-USD 的一律当加密货币
-        if code.endswith(CRYPTO_SUFFIX):
-            coins.append(code[: -len(CRYPTO_SUFFIX)])
+        upper = token.upper()
+        coin = upper.replace(CRYPTO_SUFFIX, "")
+        if upper.endswith(CRYPTO_SUFFIX) or (coin in CRYPTO_LABEL and not re.search(r"[.\d]", upper)):
+            if coin not in coins:
+                coins.append(coin)
             continue
-        # 裸代码：先看美股里有没有同名 ticker（BTC/ETH 这类常见币名不在美股列表里），
-        # 命中已知币种且不是上游认识的股票写法时，按加密货币处理
-        if code in CRYPTO_LABEL and not re.search(r"[.\d]", code):
-            coins.append(code)
-    stock_tokens = [t.strip() for t in upstream_split(raw or "") if t.strip()]
-    known = set(coins)
-    stocks = [
-        t
-        for t in stock_tokens
-        # 上游把币种当美股代码收下了，这里剔掉；用户若真买了同名美股，请写成 XXX.US 之类避开
-        if not (t.strip().upper().endswith(CRYPTO_SUFFIX) or t.strip().upper() in known)
-    ]
+        if upper not in [s.upper() for s in stocks]:
+            stocks.append(token)
     return stocks, coins
+
+
+def fetch_yahoo_daily(coin: str, days: int = BAR_DAYS):
+    """直接取 Yahoo 的日线。
+
+    为什么不用上游的 DataFetcherManager：它会给代码加市场后缀（实测 BTC-USD 被拼成
+    BTC-USD.SZ 再丢给 yfinance），六个数据源全部失败；币种只有 Yahoo 这一个可靠来源，
+    这里按同一份 Yahoo chart 接口自己取，字段口径与上游 DataFrame 保持一致。
+    """
+    import pandas as pd
+
+    symbol = f"{coin}{CRYPTO_SUFFIX}"
+    span = f"{days + 40}d"
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range={span}&interval=1d"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        payload = json.loads(resp.read().decode("utf-8"))
+    result = (payload.get("chart") or {}).get("result") or []
+    if not result:
+        return None, "Yahoo 没有返回该代码"
+    item = result[0]
+    quotes = ((item.get("indicators") or {}).get("quote") or [{}])[0]
+    stamps = item.get("timestamp") or []
+    rows = []
+    for idx, ts in enumerate(stamps):
+        close = (quotes.get("close") or [None])[idx]
+        if close is None:
+            continue
+        rows.append(
+            {
+                "date": datetime.utcfromtimestamp(ts).strftime("%Y-%m-%d"),
+                "open": (quotes.get("open") or [None])[idx],
+                "high": (quotes.get("high") or [None])[idx],
+                "low": (quotes.get("low") or [None])[idx],
+                "close": close,
+                "volume": (quotes.get("volume") or [None])[idx],
+            }
+        )
+    if len(rows) < 20:
+        return None, "Yahoo 日线太少"
+    return pd.DataFrame(rows).tail(days), ""
 
 
 def collect_coin(coin: str) -> dict | None:
     """拉行情 + 算技术指标，返回一份可 JSON 化的快照；拿不到就返回 None。"""
-    from data_provider import DataFetcherManager
     from src.stock_analyzer import StockTrendAnalyzer
 
-    symbol = f"{coin}{CRYPTO_SUFFIX}"
-    manager = DataFetcherManager()
-    quote = manager.get_realtime_quote(symbol, log_final_failure=False)
-
-    end = datetime.now().date()
-    start = end - timedelta(days=BAR_DAYS * 2)
-    df, error = manager.get_daily_data(symbol, start.isoformat(), end.isoformat(), days=BAR_DAYS)
-    if df is None or not hasattr(df, "columns") or len(df) < 20:
-        log(f"{coin}: 日线不足（{error or 'empty'}），跳过")
+    df, error = fetch_yahoo_daily(coin)
+    if df is None:
+        log(f"{coin}: 行情取不到（{error}），跳过")
         return None
-    df.columns = [str(c).strip().lower() for c in df.columns]
-    df = df.tail(BAR_DAYS)
+    symbol = f"{coin}{CRYPTO_SUFFIX}"
     trend = StockTrendAnalyzer().analyze(df, symbol)
 
     last = df.iloc[-1]
     prev = df.iloc[-2]
-    price = float(getattr(quote, "price", 0) or last.get("close") or 0)
-    prev_close = float(last.get("close") or 0)
+    # 日线收盘就是最新价（加密 24h 交易，最后一根未收完的也由 Yahoo 给出）
+    price = float(last.get("close") or 0)
+    prev_close = float(prev.get("close") or 0)
     change_pct = (price / prev_close - 1) * 100 if prev_close else 0.0
     fields = {
         "现价": price,
@@ -135,7 +173,7 @@ def collect_coin(coin: str) -> dict | None:
         "symbol": symbol,
         "name": CRYPTO_LABEL.get(coin, coin),
         "price": price,
-        "prevClose": float(prev.get("close") or 0),
+        "prevClose": prev_close,
         "changePct": round(change_pct, 2),
         "trend": str(getattr(trend, "trend_status", "") or ""),
         "metrics": {k: v for k, v in fields.items() if isinstance(v, (int, float)) and v == v},
@@ -147,9 +185,11 @@ def collect_coin(coin: str) -> dict | None:
 
 
 def coin_prompt(snapshot: dict) -> str:
-    metrics = "\n".join(f"- {k}: {v:.4g}" if isinstance(v, float) else f"- {k}: {v}" for k, v in snapshot["metrics"].items())
-    return f"""你是一名只做价格行为（price action）与资金结构的加密货币分析师。
-下面只有 {snapshot['coin']}（{snapshot['name']}）的日线技术数据，没有链上数据、没有新闻、没有宏观信息，
+    metrics = "\n".join(
+        f"- {k}: {v:.4g}" if isinstance(v, float) else f"- {k}: {v}" for k, v in snapshot["metrics"].items()
+    )
+    return f"""你是一名只做价格行为（price action）与结构的加密货币分析师。
+下面只有 {snapshot['coin']}（{snapshot['name']}）的日线技术数据，没有链上数据、没有新闻、没有宏观信息。
 禁止编造任何基本面、新闻或资金流数字；不确定的地方直接写「数据缺失」。
 
 {snapshot['symbol']} 最新价 {snapshot['price']:.4f}（昨收 {snapshot['prevClose']:.4f}，今日 {snapshot['changePct']:+.2f}%）
@@ -184,7 +224,9 @@ def coin_prompt(snapshot: dict) -> str:
 
 def coin_section(snapshot: dict) -> str:
     """模型不可用时的纯技术面兜底：结构化表格 + 一句方向判断。"""
-    rows = "\n".join(f"| {k} | {v:.4g} |" if isinstance(v, float) else f"| {k} | {v} |" for k, v in snapshot["metrics"].items())
+    rows = "\n".join(
+        f"| {k} | {v:.4g} |" if isinstance(v, float) else f"| {k} | {v} |" for k, v in snapshot["metrics"].items()
+    )
     direction = "偏强" if "多头" in snapshot["trend"] else ("偏弱" if "空头" in snapshot["trend"] else "震荡")
     return f"""### 💭 一句话结论
 技术面{direction}，模型研判暂不可用，仅给出指标参考。
@@ -200,11 +242,14 @@ def coin_section(snapshot: dict) -> str:
 def run_coin_analysis(snapshot: dict) -> str:
     try:
         from src.analyzer import GeminiAnalyzer
+        from src.config import get_config
 
         analyzer = GeminiAnalyzer(config=get_config())
         result = analyzer._call_litellm(
             prompt=coin_prompt(snapshot),
-            generation_config={"temperature": 0.2, "max_output_tokens": 900},
+            # 别把 max_output_tokens 压太小：网关的推理型模型会把它全花在思考上，
+            # 回包内容为空（实测 BTC 就是这样失败的），这里贴近上游默认的 8192。
+            generation_config={"temperature": 0.2, "max_output_tokens": 4096, "timeout": 180},
             system_prompt="你是严谨的技术面分析师，只基于给定数据回答，不编造信息。",
         )
         text = result[0] if isinstance(result, tuple) else result
@@ -230,20 +275,51 @@ def crypto_block(coins: list[str]) -> str:
         )
     if not sections:
         return ""
-    return "\n---\n\n## ₿ 加密货币研判\n" + "".join(sections)
+    return BLOCK_MARKER + "".join(sections)
+
+
+def write_block(block: str) -> None:
+    reports_dir = ROOT / "reports"
+    reports_dir.mkdir(exist_ok=True)
+    path = reports_dir / f"report_{datetime.now().strftime('%Y%m%d')}.md"
+    if path.exists():
+        existing = path.read_text(encoding="utf-8")
+        # 去掉上一轮追加的加密货币段，避免同一天多次运行时重复堆叠
+        if BLOCK_MARKER in existing:
+            existing = existing.split(BLOCK_MARKER)[0]
+        path.write_text(existing.rstrip() + "\n" + block, encoding="utf-8")
+    else:
+        header = f"# 🎯 {datetime.now().strftime('%Y-%m-%d')} 决策仪表盘\n\n> 仅加密货币分析（未配置股票）\n"
+        path.write_text(header + block, encoding="utf-8")
+    log(f"已写入 {path}")
+
+
+def probe() -> int:
+    """临时诊断：确认 Yahoo 日线接口对币种可用、字段齐全。"""
+    for coin in ["BTC", "ETH", "SOL"]:
+        df, err = fetch_yahoo_daily(coin, 120)
+        if df is None:
+            log(f"{coin}: 失败 {err}")
+        else:
+            log(f"{coin}: {len(df)} 根 最新 {df.iloc[-1]['date']} close={df.iloc[-1]['close']:.2f} err={err!r}")
+    return 0
 
 
 def main() -> int:
+    if "--probe" in sys.argv:
+        return probe()
+    from src.config import setup_env
+
     setup_env()
     raw = user_stock_list()
     stocks, coins = split_stock_list(raw)
     log(f"股票 {len(stocks)} 只，加密货币 {len(coins)} 个：{','.join(coins) or '无'}")
 
     env = dict(os.environ)
-    # 只把股票交给上游：上游遇到 BTC-USD 会因为找不到数据源整份失败
-    env["STOCK_LIST"] = ",".join(stocks) or "AAPL"
-    native_args = sys.argv[1:]
     if stocks:
+        # 只把股票交给上游：上游遇到 -USD 会直接报错，币种由下面单独处理
+        env["STOCK_LIST"] = ",".join(stocks)
+        native_args = [a for a in sys.argv[1:]]
         code = subprocess.run([sys.executable, str(ROOT / "main.py"), *native_args], cwd=ROOT, env=env).returncode
         if code != 0:
             log(f"上游分析退出码 {code}，仍尝试补写加密货币部分")
@@ -257,21 +333,7 @@ def main() -> int:
     if not block:
         log("加密货币部分没有可用数据")
         return 0
-
-    reports_dir = ROOT / "reports"
-    reports_dir.mkdir(exist_ok=True)
-    path = reports_dir / f"report_{datetime.now().strftime('%Y%m%d')}.md"
-    if path.exists():
-        existing = path.read_text(encoding="utf-8")
-        # 去掉上一轮追加的加密货币段，避免同一天多次运行时重复堆叠
-        marker = "\n---\n\n## ₿ 加密货币研判"
-        if marker in existing:
-            existing = existing.split(marker)[0]
-        path.write_text(existing.rstrip() + "\n" + block, encoding="utf-8")
-    else:
-        header = f"# 🎯 {datetime.now().strftime('%Y-%m-%d')} 决策仪表盘\n\n> 仅加密货币分析（未配置股票）\n"
-        path.write_text(header + block, encoding="utf-8")
-    log(f"已写入 {path}")
+    write_block(block)
     return 0
 
 

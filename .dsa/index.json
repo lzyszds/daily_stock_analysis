@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1794818005593,
+  "generatedAt": 1794821852409,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
@@ -7,9 +7,14 @@
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794818005592,
+      "updatedAt": 1794821852409,
       "symbols": [
-        "600519"
+        "AAPL",
+        "APLD",
+        "BTUSD",
+        "MU",
+        "NVDA",
+        "SNDK"
       ]
     }
   ]

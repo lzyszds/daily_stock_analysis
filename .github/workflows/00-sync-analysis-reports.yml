@@ -1,0 +1,117 @@
+name: 同步分析报告
+
+# 把「每日股票分析」产出的 markdown 报告推到仓库的 .dsa/ 目录。
+#
+# 为什么不直接让每日分析那条工作流自己 commit：
+# - 那条工作流跑在 fork 里，给它加「推送权限」= 把一个可写 token 暴露给带第三方
+#   数据源依赖的流程，耦合和风险都更大；
+# - 单独一条工作流职责清晰：只读 artifact、只写 .dsa/*.md，出问题不会影响分析本身。
+# 客户端（devNotes）只读 .dsa/index.json + raw markdown，不碰任何服务端接口。
+on:
+  workflow_run:
+    # 与 00-daily-analysis.yml 的 name 保持一致
+    workflows: ["每日股票分析"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: dsa-report-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    # 分析整体失败时 artifact 里也可能有日志，但报告通常不完整，跳过更省事
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: 下载最近一次分析的报告
+        id: fetch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # workflow_dispatch 时取最近一次已完成的「每日股票分析」，避免手动触发拿不到 artifact
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          mkdir -p reports-download
+          if [ -n "$RUN_ID" ]; then
+            target="$RUN_ID"
+          else
+            target=$(gh api "repos/${{ github.repository }}/actions/workflows/00-daily-analysis.yml/runs?status=completed&per_page=1" --jq '.workflow_runs[0].id')
+          fi
+          echo "使用运行记录：$target"
+          if [ -z "$target" ] || [ "$target" = "null" ]; then
+            echo "还没有任何已完成的「每日股票分析」运行，本次只更新已存档的部分"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+          gh run download "$target" -R "${{ github.repository }}" -D reports-download -p 'reports/*'
+          find reports-download -type f | head -20
+
+      - name: 生成 .dsa 索引
+        run: |
+          # 没有新报告时仍用仓库里已存档的 .dsa/*.md 重建索引，保证索引和目录永远一致
+          python3 - <<'PY'
+          import json, os, re, time
+          from pathlib import Path
+
+          src_root = Path('reports-download')
+          out_dir = Path('.dsa')
+          out_dir.mkdir(exist_ok=True)
+
+          # artifact 里 reports/ 可能嵌套在 analysis-reports-N/ 下，按文件名收集
+          incoming = [p for p in src_root.rglob('*.md') if p.is_file()]
+          # 已有存档 + 本次下载，按文件名去重（新的覆盖旧的）
+          by_name = {p.name: p.read_text(encoding='utf-8', errors='replace') for p in out_dir.glob('*.md')}
+          for p in incoming:
+              by_name[p.name] = p.read_text(encoding='utf-8', errors='replace')
+          files = sorted(by_name)
+          entries = []
+          keep = 60  # 只留最近 60 份日报，旧报告对「今日研判」没意义，还会把仓库撑大
+          for name in files:
+              m = re.search(r'(\d{4})-?(\d{2})-?(\d{2})', name)
+              if not m:
+                  continue
+              date = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+              text = by_name[name]
+              # 与客户端口径一致：报告里股票代码写成 (600519) / (hk00700) / (AAPL)
+              symbols = sorted({(a + b).upper() for a, b in re.findall(r'\(([a-zA-Z]{0,2})(\d{5,6}|[A-Z]{1,5})\)', text)})
+              entries.append({'name': name, 'path': name, 'date': date, 'updatedAt': int(time.time() * 1000), 'symbols': symbols})
+              (out_dir / name).write_text(text, encoding='utf-8')
+
+          entries.sort(key=lambda e: e['name'])
+          keep_names = {e['name'] for e in entries[-keep:]}
+          for old in out_dir.glob('*.md'):
+              if old.name not in keep_names:
+                  old.unlink()
+
+          index = {
+              'generatedAt': int(time.time() * 1000),
+              'reportsPath': '.dsa',
+              'source': 'action',
+              'reports': [e for e in entries if e['name'] in keep_names][::-1],
+          }
+          (out_dir / 'index.json').write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(f"同步 {len(index['reports'])} 份报告")
+          PY
+
+      - name: 提交到仓库
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .dsa
+          if git diff --cached --quiet; then
+            echo "报告没有变化，跳过提交"
+            exit 0
+          fi
+          git commit -m "chore(dsa): sync analysis reports"
+          # 并发时远端可能已被推过，重试一次就够了（同一目录只由本工作流写）
+          git push || (git pull --rebase --autostash && git push)

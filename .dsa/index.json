@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1794816501710,
+  "generatedAt": 1794818005593,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
@@ -7,7 +7,7 @@
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794816501710,
+      "updatedAt": 1794818005592,
       "symbols": [
         "600519"
       ]

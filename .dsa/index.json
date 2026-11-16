@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1794823776943,
+  "generatedAt": 1794824384546,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
@@ -7,13 +7,17 @@
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794823776943,
+      "updatedAt": 1794824384546,
       "symbols": [
         "AAPL",
+        "APLD",
         "BTC",
         "ETH",
+        "MSFT",
         "MU",
-        "NVDA"
+        "NVDA",
+        "SNDK",
+        "SPCX"
       ]
     }
   ]

@@ -564,13 +564,16 @@ jobs:
           fi
 
           # 执行分析
+          # 走 .dsa/run_analysis.py 而不是直接 python main.py：
+          # 它会把 STOCK_LIST 里的加密货币（BTC / ETH…）单独按日线技术面分析后，
+          # 追加到同一份日报里 —— 上游 main.py 只认股票，遇到币种整份都会失败。
+          MODE_ARGS=""
           if [ "$MODE" = "market-only" ]; then
-            python main.py --market-review $FORCE_RUN_ARG
+            MODE_ARGS="--market-review"
           elif [ "$MODE" = "stocks-only" ]; then
-            python main.py --no-market-review $FORCE_RUN_ARG
-          else
-            python main.py $FORCE_RUN_ARG
+            MODE_ARGS="--no-market-review"
           fi
+          python .dsa/run_analysis.py $MODE_ARGS $FORCE_RUN_ARG
       
       - name: 上传分析报告
         uses: actions/upload-artifact@v6

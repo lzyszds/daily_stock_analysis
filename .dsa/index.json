@@ -1,13 +1,30 @@
 {
-  "generatedAt": 1794859834023,
+  "generatedAt": 1794907438644,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
     {
+      "name": "report_20261117.md",
+      "path": "report_20261117.md",
+      "date": "2026-11-17",
+      "updatedAt": 1794907438643,
+      "symbols": [
+        "AAPL",
+        "APLD",
+        "BTC",
+        "ETH",
+        "MSFT",
+        "MU",
+        "NVDA",
+        "SNDK",
+        "SPCX"
+      ]
+    },
+    {
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794859834023,
+      "updatedAt": 1794907438643,
       "symbols": [
         "AAPL",
         "APLD",
@@ -23,7 +40,7 @@
       "name": "market_review_20261116.md",
       "path": "market_review_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794859834023,
+      "updatedAt": 1794907438643,
       "symbols": []
     }
   ]

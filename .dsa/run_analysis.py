@@ -261,8 +261,14 @@ def run_coin_analysis(snapshot: dict) -> str:
     return coin_section(snapshot)
 
 
-def crypto_block(coins: list[str]) -> str:
+def crypto_block(coins: list[str]) -> tuple[str, list[dict]]:
+    """返回（追加进日报的 markdown, 供 JSON 使用的结构化条目）。
+
+    两边同时产出，是因为 App / 自建界面要的是快照和指标，而日报仍然需要一段
+    能直接读的正文；让它们共用同一次 collect_coin，避免把行情拉两遍。
+    """
     sections = []
+    items: list[dict] = []
     for coin in coins:
         log(f"分析 {coin}…")
         snapshot = collect_coin(coin)
@@ -273,9 +279,10 @@ def crypto_block(coins: list[str]) -> str:
             f"\n## ⚪ {snapshot['name']} ({coin})\n\n"
             f"> 加密货币 · 日线技术面 · {snapshot['lastDate']}\n\n{body}\n"
         )
+        items.append({**snapshot, "markdown": body})
     if not sections:
-        return ""
-    return BLOCK_MARKER + "".join(sections)
+        return "", items
+    return BLOCK_MARKER + "".join(sections), items
 
 
 def write_block(block: str) -> None:
@@ -291,6 +298,124 @@ def write_block(block: str) -> None:
     else:
         header = f"# 🎯 {datetime.now().strftime('%Y-%m-%d')} 决策仪表盘\n\n> 仅加密货币分析（未配置股票）\n"
         path.write_text(header + block, encoding="utf-8")
+    log(f"已写入 {path}")
+
+
+def history_max_id() -> int:
+    """取当前库里的最大历史记录 id。
+
+    跑上游之前先记下来，跑完只导出 id 大于它的行：Actions 里库是空的，
+    但本地重跑时这么过滤才不会把上一次的结果混进今天的 JSON。
+    """
+    import sqlite3
+
+    db_path = ROOT / "data" / "stock_analysis.db"
+    if not db_path.exists():
+        return 0
+    try:
+        with sqlite3.connect(f"file:{db_path}?mode=ro", uri=True) as conn:
+            row = conn.execute("SELECT COALESCE(MAX(id), 0) FROM analysis_history").fetchone()
+            return int(row[0] or 0)
+    except sqlite3.Error as exc:
+        log(f"读取分析库失败（{exc}），按 0 处理")
+        return 0
+
+
+def load_history_rows(since_id: int) -> list[dict]:
+    """从上游的 SQLite 里读本次新增的分析记录。
+
+    为什么不解析 markdown：日报是给人读的拼接文本，模板一改字段就对不上；
+    而 analysis_history.raw_result 存的是 AnalysisResult.to_dict()，
+    含 dashboard（结论 / 技术面 / 情报 / 作战计划）和狙击点位，做界面直接可用。
+    """
+    import sqlite3
+
+    db_path = ROOT / "data" / "stock_analysis.db"
+    if not db_path.exists():
+        log(f"没有找到 {db_path}，JSON 里只会有加密货币部分")
+        return []
+    try:
+        with sqlite3.connect(f"file:{db_path}?mode=ro", uri=True) as conn:
+            conn.row_factory = sqlite3.Row
+            rows = conn.execute(
+                """
+                SELECT id, code, name, report_type, sentiment_score, operation_advice,
+                       trend_prediction, analysis_summary, raw_result,
+                       ideal_buy, secondary_buy, stop_loss, take_profit, created_at
+                FROM analysis_history
+                WHERE id > ?
+                ORDER BY id
+                """,
+                (since_id,),
+            ).fetchall()
+    except sqlite3.Error as exc:
+        log(f"读取分析历史失败（{exc}），JSON 里只会有加密货币部分")
+        return []
+
+    items = []
+    for row in rows:
+        detail: dict = {}
+        if row["raw_result"]:
+            try:
+                detail = json.loads(row["raw_result"])
+            except (TypeError, ValueError):
+                detail = {}
+        items.append(
+            {
+                "code": row["code"],
+                "name": row["name"],
+                "reportType": row["report_type"],
+                "sentimentScore": row["sentiment_score"],
+                "trendPrediction": row["trend_prediction"],
+                "operationAdvice": row["operation_advice"],
+                "action": detail.get("action"),
+                "actionLabel": detail.get("action_label"),
+                "confidenceLevel": detail.get("confidence_level"),
+                "currentPrice": detail.get("current_price"),
+                "changePct": detail.get("change_pct"),
+                "modelUsed": detail.get("model_used"),
+                "analysisSummary": row["analysis_summary"],
+                "keyPoints": detail.get("key_points"),
+                "riskWarning": detail.get("risk_warning"),
+                "newsSummary": detail.get("news_summary"),
+                # dashboard 是上游提示词里的结构化产物（core_conclusion / data_perspective /
+                # intelligence / battle_plan），字段名见 src/analyzer.py 的 OUTPUT_SCHEMA
+                "dashboard": detail.get("dashboard"),
+                "plan": {
+                    "idealBuy": row["ideal_buy"],
+                    "secondaryBuy": row["secondary_buy"],
+                    "stopLoss": row["stop_loss"],
+                    "takeProfit": row["take_profit"],
+                },
+                "createdAt": row["created_at"],
+            }
+        )
+    return items
+
+
+def write_json(since_id: int, coins: list[dict]) -> None:
+    """把本次分析导出成结构化 JSON，与 md 同名同目录。
+
+    界面只需要读 reports/report_YYYYMMDD.json：股票部分来自上游落库的
+    raw_result，加密货币部分来自上面 collect_coin 的快照，无需再解析 markdown。
+    """
+    payload = {
+        "version": 1,
+        "date": datetime.now().strftime("%Y-%m-%d"),
+        "generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "stocks": load_history_rows(since_id),
+        "crypto": coins,
+    }
+    if not payload["stocks"] and not payload["crypto"]:
+        log("本次没有任何分析结果，跳过 JSON")
+        return
+    reports_dir = ROOT / "reports"
+    reports_dir.mkdir(exist_ok=True)
+    path = reports_dir / f"report_{datetime.now().strftime('%Y%m%d')}.json"
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, default=str),
+        encoding="utf-8",
+    )
     log(f"已写入 {path}")
 
 
@@ -315,6 +440,9 @@ def main() -> int:
     stocks, coins = split_stock_list(raw)
     log(f"股票 {len(stocks)} 只，加密货币 {len(coins)} 个：{','.join(coins) or '无'}")
 
+    # 上游跑之前先记下库里的最大 id，跑完只导出新增行
+    history_before = history_max_id()
+
     env = dict(os.environ)
     if stocks:
         # 只把股票交给上游：上游遇到 -USD 会直接报错，币种由下面单独处理
@@ -326,14 +454,15 @@ def main() -> int:
     else:
         log("没有股票代码，跳过上游分析（只跑加密货币）")
 
-    if not coins:
-        return 0
+    coins_payload: list[dict] = []
+    if coins:
+        block, coins_payload = crypto_block(coins)
+        if block:
+            write_block(block)
+        else:
+            log("加密货币部分没有可用数据")
 
-    block = crypto_block(coins)
-    if not block:
-        log("加密货币部分没有可用数据")
-        return 0
-    write_block(block)
+    write_json(history_before, coins_payload)
     return 0
 
 

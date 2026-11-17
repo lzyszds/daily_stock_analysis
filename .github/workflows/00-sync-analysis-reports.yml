@@ -79,6 +79,11 @@ jobs:
           by_name = {p.name: p.read_text(encoding='utf-8', errors='replace') for p in out_dir.glob('*.md')}
           for p in incoming:
               by_name[p.name] = p.read_text(encoding='utf-8', errors='replace')
+          # 结构化 JSON 与 md 同名：report_YYYYMMDD.json，界面读它就不用解析 markdown
+          json_by_name = {p.name: p.read_text(encoding='utf-8', errors='replace') for p in out_dir.glob('report_*.json')}
+          for p in src_root.rglob('report_*.json'):
+              if p.is_file():
+                  json_by_name[p.name] = p.read_text(encoding='utf-8', errors='replace')
           files = sorted(by_name)
           entries = []
           keep = 60  # 只留最近 60 份日报，旧报告对「今日研判」没意义，还会把仓库撑大
@@ -90,14 +95,25 @@ jobs:
               text = by_name[name]
               # 与客户端口径一致：报告里股票代码写成 (600519) / (hk00700) / (AAPL)
               symbols = sorted({(a + b).upper() for a, b in re.findall(r'\(([a-zA-Z]{0,2})(\d{5,6}|[A-Z]{1,5})\)', text)})
-              entries.append({'name': name, 'path': name, 'date': date, 'updatedAt': int(time.time() * 1000), 'symbols': symbols})
+              entry = {'name': name, 'path': name, 'date': date, 'updatedAt': int(time.time() * 1000), 'symbols': symbols}
+              data_name = name[:-3] + '.json'
+              if data_name in json_by_name:
+                  entry['dataPath'] = data_name
+              entries.append(entry)
               (out_dir / name).write_text(text, encoding='utf-8')
 
           entries.sort(key=lambda e: e['name'])
           keep_names = {e['name'] for e in entries[-keep:]}
+          keep_data = {n[:-3] + '.json' for n in keep_names}
           for old in out_dir.glob('*.md'):
               if old.name not in keep_names:
                   old.unlink()
+          for old in out_dir.glob('report_*.json'):
+              if old.name not in keep_data:
+                  old.unlink()
+          for name, text in json_by_name.items():
+              if name in keep_data:
+                  (out_dir / name).write_text(text, encoding='utf-8')
 
           index = {
               'generatedAt': int(time.time() * 1000),

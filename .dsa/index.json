@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1794909106719,
+  "generatedAt": 1794909256018,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
@@ -7,7 +7,7 @@
       "name": "report_20261117.md",
       "path": "report_20261117.md",
       "date": "2026-11-17",
-      "updatedAt": 1794909106719,
+      "updatedAt": 1794909256018,
       "symbols": [
         "BTC",
         "ETH",
@@ -19,7 +19,7 @@
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794909106718,
+      "updatedAt": 1794909256018,
       "symbols": [
         "AAPL",
         "APLD",
@@ -35,7 +35,7 @@
       "name": "market_review_20261116.md",
       "path": "market_review_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794909106718,
+      "updatedAt": 1794909256018,
       "symbols": []
     }
   ]

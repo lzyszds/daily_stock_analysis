@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1794966456395,
+  "generatedAt": 1795027776498,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
@@ -7,7 +7,7 @@
       "name": "report_20261118.md",
       "path": "report_20261118.md",
       "date": "2026-11-18",
-      "updatedAt": 1794966456394,
+      "updatedAt": 1795027776497,
       "symbols": [
         "AAPL",
         "APLD",
@@ -16,6 +16,7 @@
         "MSFT",
         "MU",
         "NVDA",
+        "SNDK",
         "SPCX"
       ],
       "dataPath": "report_20261118.json"
@@ -24,7 +25,7 @@
       "name": "report_20261117.md",
       "path": "report_20261117.md",
       "date": "2026-11-17",
-      "updatedAt": 1794966456394,
+      "updatedAt": 1795027776497,
       "symbols": [
         "AAPL",
         "APLD",
@@ -42,7 +43,7 @@
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794966456394,
+      "updatedAt": 1795027776497,
       "symbols": [
         "AAPL",
         "APLD",
@@ -58,21 +59,21 @@
       "name": "market_review_20261118.md",
       "path": "market_review_20261118.md",
       "date": "2026-11-18",
-      "updatedAt": 1794966456393,
+      "updatedAt": 1795027776497,
       "symbols": []
     },
     {
       "name": "market_review_20261117.md",
       "path": "market_review_20261117.md",
       "date": "2026-11-17",
-      "updatedAt": 1794966456393,
+      "updatedAt": 1795027776496,
       "symbols": []
     },
     {
       "name": "market_review_20261116.md",
       "path": "market_review_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1794966456393,
+      "updatedAt": 1795027776496,
       "symbols": []
     }
   ]

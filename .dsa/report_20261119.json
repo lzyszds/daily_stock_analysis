@@ -1,0 +1,1179 @@
+{
+  "version": 1,
+  "date": "2026-11-19",
+  "generatedAt": "2026-11-19T01:33:47+00:00",
+  "stocks": [
+    {
+      "code": "MARKET",
+      "name": "大盘复盘",
+      "reportType": "market_review",
+      "sentimentScore": 50,
+      "trendPrediction": "大盘复盘",
+      "operationAdvice": "查看复盘",
+      "action": null,
+      "actionLabel": null,
+      "confidenceLevel": "中",
+      "currentPrice": null,
+      "changePct": null,
+      "modelUsed": null,
+      "analysisSummary": "2026-11-19 大盘复盘",
+      "keyPoints": "",
+      "riskWarning": "",
+      "newsSummary": "## 2026-11-19 大盘复盘\n\n> 今日核心矛盾是三大指数明显分化：纳指独自收涨，道指大幅拖累，标普夹在中间；VIX 回落但绝对水位仍偏高。明日优先观察：纳指的相对强势能否扩散，道指跌幅是否收敛。\n\n### 一、盘面总览\n今日指数未能同向运行：纳斯达克综合指数上涨 0.42%，标普500指数微跌 0.23%，道琼斯工业指数下跌 1.11%，强弱差距超过 1.5 个百分点，主线不一致。VIX 收于 24.56、下跌 3.53%，方向上是情绪修复，但 24 以上的绝对水位仍说明市场在为波动定价，属于“波动收敛但未回归平静”。新闻层面没有出现可用于交易的宏观或政策催化，今日信息的有效含量较低。\n\n- **盘面信号**：49/100（震荡，需观察）\n- **信号依据**：主要指数平均涨跌幅 -0.31%\n- **操作建议**：信号分化，控制仓位并等待量价确认。\n\n### 二、指数结构\n**纳指是唯一正贡献方。** 24429.88 的收盘价与 +0.42% 的涨幅，说明成长、科技类权重在今日获得了相对支撑，是全场唯一站住的方向。\n\n**标普走成中性锚。** 7323.63、-0.23% 的微跌，本质是纳指的正贡献被道指的负贡献对冲后的结果，指数层面没有形成方向性突破，更多呈现横盘偏弱的震荡结构。\n\n**道指是主要拖累。** 50198.17、-1.11% 是三大指数中最弱的一档，且跌幅显著大于标普，说明今日的抛压集中在道指所代表的传统权重方向，而非全市场普跌。这是典型的“结构性调整”而非“系统性下跌”。\n\n**波动率与指数背离。** VIX 下跌 3.53% 却仍处在 24.56，意味着市场一边在消化恐慌，一边并未解除警戒。这与“纳指涨、道指跌”的分化结构是自洽的：资金在做结构调整，不是在全面加仓。\n\n**关于关键支撑、压力位**：本次数据仅提供收盘点位，未提供近期高低点、均线与成交密集区，无法可靠测算技术位。可操作的替代做法是把 7323.63、24429.88、50198.17 作为“当日收盘跟踪位”，观察次日是否在该水平附近获得承接或失守，而非将其当作严格意义上的支撑或压力。\n\n| 指数 | 最新 | 涨跌幅 | 开盘 | 最高 | 最低 | 振幅 | 成交额(亿) |\n|------|------|--------|------|------|------|------|-----------|\n| 标普500指数 | 7323.63 | 🔴 -0.23% | 7355.69 | 7367.68 | 7285.76 | 1.12% | N/A |\n| 纳斯达克综合指数 | 24429.88 | 🟢 +0.42% | 24486.17 | 24538.78 | 24225.30 | 1.29% | N/A |\n| 道琼斯工业指数 | 50198.17 | 🔴 -1.11% | 50627.36 | 50637.70 | 50029.35 | 1.20% | N/A |\n| VIX恐慌指数 | 24.56 | 🔴 -3.53% | 24.22 | 26.26 | 23.45 | 11.04% | N/A |\n\n### 三、消息催化\n今日三条新闻中，两条为娱乐、版权类旧闻，内容与时间戳均不构成对美股的宏观或行业催化；第三条为 CNBC 市场新闻入口页，属于信息索引而非事件本身。**因此，今日到明日不存在可识别的新闻驱动线索。**\n\n这一点必须明确：当消息面为空时，指数表现本身就成了唯一有效信息。今日的结构信息是“资金从道指方向流向纳指方向”，这属于内部轮动，而非外部事件推动。明日交易不应预设某个宏观叙事会发酵，而应直接跟随指数的相对强弱变化。\n\n同时需说明信息边界：本次数据未提供涨跌家数、成交额汇总、资金流向与板块涨跌榜，因此无法判断今日上涨是普涨还是少数权重拉动，也无法确认轮动是否具有板块层面的持续性。在上述数据补齐前，不建议把“纳指强于道指”直接外推为“科技板块整体走强”。\n\n### 四、明日交易计划\n**结论：均衡。** 理由是指数分化、方向不一致，且消息面无增量催化；按策略原则，指数分化时应保守执行，不因纳指单日收涨就切换到进攻。\n\n**仓位区间**：维持中性水平，建议总仓位控制在 40%–60%，保留现金以应对分化收敛时的方向选择。此为框架性区间，需结合个人风险预算调整。\n\n**关注方向**：\n- 纳指相对强度的延续性，这是当前唯一有正反馈的方向；\n- 道指跌幅是否收窄，这是判断“结构性调整”是否演变为“全面走弱”的关键；\n- VIX 能否在 24 附近继续下行，波动率是当前最灵敏的风险偏好温度计。\n\n**回避方向**：\n- 回避在道指尚未止跌前加仓道指所代表的传统权重方向；\n- 回避基于新闻的题材博弈，今日无有效催化，任何叙事都缺乏依据；\n- 回避在指数分化未收敛时做单边方向性重仓。\n\n**升级与失效条件**：\n- *升级为进攻*：纳指继续收涨，同时道指由跌转涨、标普跟涨，三大指数同向向上，且 VIX 进一步回落。三者同时满足才视为主线一致。\n- *降级为防守（触发失效）*：纳指由涨转跌，VIX 止跌回升，同时道指跌幅扩大，即“唯一正贡献方失效 + 波动率重新抬升”同时出现。此时应优先减码，保留反弹中的可交易性。\n\n### 五、风险提示\n1. **数据缺口风险**：本次未提供涨跌家数、成交额汇总、资金流与板块涨跌榜，市场宽度与参与度无法验证，对“分化是轮动还是普跌”的判断存在盲区。\n2. **波动率绝对水位偏高**：VIX 24.56 虽当日回落，但仍处于易放大波动的区间，单日方向反转的成本较高。\n3. **道指弱势的持续性未知**：-1.11% 是单日现象还是趋势起点，仅凭一个交易日与收盘点位无法确认。\n4. **消息面真空**：今日无有效宏观或政策催化，缺乏事件驱动的市场更容易受技术面与流动性波动主导，方向稳定性较差。\n5. **技术位无法量化**：缺少历史高低点数据，任何支撑、压力的表述均应视为跟踪参考而非交易依据。\n\n建议仅供参考，不构成投资建议。",
+      "dashboard": null,
+      "plan": {
+        "idealBuy": null,
+        "secondaryBuy": null,
+        "stopLoss": null,
+        "takeProfit": null
+      },
+      "createdAt": "2026-11-19 01:23:08.015064"
+    },
+    {
+      "code": "MU",
+      "name": "Micron Technology, Inc.",
+      "reportType": "simple",
+      "sentimentScore": 38,
+      "trendPrediction": "看空",
+      "operationAdvice": "减仓",
+      "action": "reduce",
+      "actionLabel": "减仓",
+      "confidenceLevel": "中",
+      "currentPrice": 705.27,
+      "changePct": -4.82,
+      "modelUsed": "deepseek-flash",
+      "analysisSummary": "美光收705.27美元、跌4.82%，同时失守MA5、MA10、MA20，MA10<MA20使多头排列不成立，属破位而非回踩。量能平量、承接不足；Wolfe点名芯片股盈利预期风险，板块情绪偏空。基本面PE 9.49、ROE 88.26%仍强，但周期高位不可忽视。结论：减仓观望，站回732.94再评估。",
+      "keyPoints": "①MA5>MA10>MA20多头排列不成立，股价跌破全部均线；②负乖离-5.04%，无追高风险但属向下破位；③0.99倍平量下跌，抛压未消化；④Wolfe点名芯片板块盈利下修风险；⑤PE 9.49+ROE 88.26%，估值便宜但周期位置高",
+      "riskWarning": "1）技术破位：收盘价较MA20低约12.8%，若明日跌破687.34/680将打开下行空间；2）板块情绪：机构对头部芯片股盈利预期转谨慎，存储周期见顶风险不可忽视；3）大盘：VIX 24.56高位、指数分化，系统性波动仍在定价；4）数据局限：行情为降级数据源、技术指标部分可用、筹码数据缺失，本次结论可靠性为中等，不宜重仓押注。",
+      "newsSummary": "近3日仅1条带明确日期的有效信息：2026-11-18 Wolfe Research 策略师 Chris Senyek 表示，对英伟达、AMD、博通、美光等头部半导体公司的悲观情绪可能削弱盈利预期并拖累标普500。其余检索结果为无发布时间的百科类背景资料，按时间规则不予采信。",
+      "dashboard": {
+        "core_conclusion": {
+          "one_sentence": "跌破MA20趋势转弱，减仓避险，站回733再谈买",
+          "signal_type": "⚠️风险警告",
+          "time_sensitivity": "本周内",
+          "position_advice": {
+            "no_position": "空仓者：不抄底、不追跌。MA5>MA10>MA20 多头排列不成立，价格同时位于MA5/MA10/MA20下方，属破位状态。最早也要等日线重新站上MA10（732.94）并回踩不破，才可用1-2成小仓试单；跌破680继续空仓。",
+            "has_position": "持仓者：本轮已下跌4.82%且失守全部均线，建议先减仓至3成以下锁定风险，保留观察仓。反弹至MA5（742.69）/MA10（732.94）附近若滞涨或放量滞跌，继续减；跌破680（今日低点687.34下方）无条件出清。"
+          }
+        },
+        "data_perspective": {
+          "trend_status": {
+            "ma_alignment": "弱势多头但已破位：MA5(742.69)>MA10(732.94)成立，但MA10<MA20(809.10)，非完整多头排列；且收盘705.27同时跌破MA5、MA10、MA20，中期趋势线失守",
+            "is_bullish": false,
+            "trend_score": 35
+          },
+          "price_position": {
+            "current_price": 705.27,
+            "ma5": 742.69,
+            "ma10": 732.94,
+            "ma20": 809.1,
+            "bias_ma5": -5.04,
+            "bias_status": "警戒",
+            "support_level": 687.34,
+            "resistance_level": 732.94
+          },
+          "volume_analysis": {
+            "volume_ratio": null,
+            "volume_status": "平量",
+            "turnover_rate": null,
+            "volume_meaning": "成交量约为昨日0.99倍，属平量下跌：既无放量恐慌式出清，也无缩量止跌迹象，说明抛压未被充分消化、承接力度不足，破位缺少放量确认，反弹需等缩量企稳信号。量比与换手率数据缺失，无法判断，量能判断仅基于量比昨日变化。"
+          },
+          "chip_structure": {},
+          "chip_unavailable_reason": "筹码分布未启用或数据源暂不可用，未纳入筹码判断。"
+        },
+        "intelligence": {
+          "latest_news": "【2026-11-18】Wolfe Research 策略师 Chris Senyek 指出，市场对英伟达、AMD、博通、美光等头部半导体公司的悲观情绪可能削弱盈利预期，进而拖累标普500；近3日无其他带明确发布日期的公司层面消息。",
+          "risk_alerts": [
+            "2026-11-18 板块情绪风险：Wolfe Research 明确点名美光在内的头部芯片股，认为悲观情绪可能引发标普500盈利预期下修，半导体权重股承压",
+            "2026-11-18 技术破位风险：收盘705.27美元、单日-4.82%，同时跌破MA5(742.69)、MA10(732.94)、MA20(809.10)，较MA20低约12.8%，中期结构转弱",
+            "2026-11-18 大盘风险：VIX 收于24.56（绝对水位偏高），纳指+0.42%、标普-0.23%、道指-1.11%，指数分化超1.5个百分点，主线不一致、风险偏好不稳",
+            "周期风险：最近报告期(2026-08-31)净利率与ROE处于极高水平（ROE 88.26%），若存储景气回落，盈利与估值双杀风险大于一般标的"
+          ],
+          "positive_catalysts": [
+            "无（近3日未检索到带明确发布日期的公司层面利好消息；现有百科类条目无发布时间，按时间规则不予采信）"
+          ],
+          "earnings_outlook": "近3日无新增业绩预告或快报。最近报告期2026-08-31：营业收入542.29亿美元、归母净利润377.01亿美元、经营现金流439.73亿美元、ROE 88.26%，处于存储景气高位，盈利质量强但周期见顶后的回落风险需同步警惕。",
+          "sentiment_summary": "消息面偏空：机构对芯片板块盈利预期转谨慎，叠加技术破位，短期情绪以避险为主。"
+        },
+        "battle_plan": {
+          "sniper_points": {
+            "ideal_buy": "理想买入点：暂不建仓。仅在687.34元（今日低点）附近出现缩量止跌K线、并重新站上MA10 732.94后，才考虑1-2成试单",
+            "secondary_buy": "次优买入点：732.94元（MA10）放量收复后回踩不破，轻仓介入；上行确认位742.69元（MA5）",
+            "stop_loss": "止损位：680.00元（跌破今日低点687.34并失守680即离场，对应现价约-3.6%）",
+            "take_profit": "目标位：第一目标742.69元（MA5），第二目标809.10元（MA20）；反弹到742.69附近滞涨即兑现部分"
+          },
+          "position_strategy": {
+            "suggested_position": "建议仓位：空仓者0成；持仓者降至3成以下",
+            "entry_plan": "不预判底部，只做右侧：日线收于MA10（732.94）上方且量能温和放大，分两批各1-2成建仓；若明日继续放量跌破687.34，放弃建仓计划",
+            "risk_control": "单笔最大亏损不超过总资金2%；跌破680无条件减半；反弹至MA5/MA10遇阻滞涨则兑现，不追高、不摊平"
+          },
+          "action_checklist": [
+            "❌ 多头排列：MA5(742.69)>MA10(732.94)成立，但MA10<MA20(809.10)，不满足MA5>MA10>MA20，且股价跌破全部均线",
+            "⚠️ 乖离率：-5.04%（负乖离，无追高风险，但属于向下破位，不是买点信号）",
+            "⚠️ 量能配合：0.99倍平量下跌，无缩量企稳也无放量突破，量能不支撑买入",
+            "⚠️ 消息面：2026-11-18 Wolfe 提示芯片板块盈利预期下修风险；无减持/处罚等公司层面重大利空公告",
+            "⚠️ 筹码健康：筹码分布数据缺失，无法判断获利比例、平均成本与集中度",
+            "✅ PE估值：动态PE 9.49、PB 5.76，估值不高，ROE 88.26%显示盈利能力强"
+          ]
+        },
+        "phase_decision": {
+          "phase_context": {
+            "phase": "postmarket",
+            "market": "us",
+            "market_local_time": "2026-11-18T20:22:44.879312-05:00",
+            "session_date": "2026-11-18",
+            "effective_daily_bar_date": "2026-11-18",
+            "is_trading_day": true,
+            "is_market_open_now": false,
+            "is_partial_bar": false,
+            "minutes_to_open": null,
+            "minutes_to_close": null,
+            "trigger_source": "cli",
+            "analysis_intent": "auto",
+            "warnings": []
+          },
+          "action_window": "盘后复盘",
+          "immediate_action": "观察",
+          "watch_conditions": [
+            "明日能否守住687.34（今日低点）与680整数关口，跌破则确认破位下行",
+            "能否收复MA10 732.94，收复并站稳才视为短期修复",
+            "成交量是否放大下跌（恐慌出清）或缩量止跌（抛压衰减）",
+            "费城半导体指数与英伟达、AMD等同板块标的的联动方向",
+            "VIX 能否回落至22以下，指数分化是否收敛"
+          ],
+          "next_check_time": "2026-11-19 09:30 ET（美股开盘）后30分钟，确认开盘缺口与量能",
+          "confidence_reason": "行情数据为降级数据源（realtime_provider_fallback），技术指标为部分可用（intraday_realtime_overlay），筹码分布缺失，量比与换手率缺失，故置信度只能给到中，不给高。",
+          "data_limitations": [
+            "行情：降级数据源，非主实时源，收盘价与前收变化可能存细微偏差",
+            "技术：部分可用，量比/换手率缺失，均线与乖离率基于已存日线计算",
+            "筹码：筹码分布数据缺失，获利比例、平均成本、集中度无法判断",
+            "新闻：近3日仅1条带日期有效信息，公司层面催化缺失，消息面判断样本不足",
+            "quote: fallback"
+          ]
+        },
+        "signal_attribution": {
+          "technical_indicators": 29,
+          "news_sentiment": 22,
+          "fundamentals": 29,
+          "market_conditions": 20,
+          "strongest_bullish_signal": "低估值（PE 9.49）+ 高ROE 88.26%的基本面支撑，RSI 35.9进入弱势超卖区",
+          "strongest_bearish_signal": "单日-4.82%跌破MA5/MA10/MA20全部均线，较MA20低约12.8%，中期趋势线失守"
+        },
+        "decision_stability": {
+          "applied": false,
+          "reason": "资金流不可用，未使用资金流校准",
+          "capital_flow_status": "市场资金流服务暂不支持",
+          "current_price": 705.27,
+          "support": 687.34,
+          "resistance": 732.94,
+          "capital_flow_bias": "unavailable"
+        },
+        "sentiment_score": 38,
+        "operation_advice": "减仓",
+        "decision_type": "sell"
+      },
+      "plan": {
+        "idealBuy": 687.34,
+        "secondaryBuy": 732.94,
+        "stopLoss": 680.0,
+        "takeProfit": 742.69
+      },
+      "createdAt": "2026-11-19 01:25:20.332674"
+    },
+    {
+      "code": "SNDK",
+      "name": "Sandisk Corporation",
+      "reportType": "simple",
+      "sentimentScore": 33,
+      "trendPrediction": "看空",
+      "operationAdvice": "减仓",
+      "action": "reduce",
+      "actionLabel": "减仓",
+      "confidenceLevel": "中",
+      "currentPrice": 776.22,
+      "changePct": -7.33,
+      "modelUsed": "claude-smart-ops",
+      "analysisSummary": "SNDK收跌7.33%至776.22，MA5/10/20空头排列，价格低于MA5约7.7%，趋势强度仅25。RSI 28.5超卖或带来反抽，但量能平量、承接不足，筹码数据缺失，新闻无实质催化。策略上不逆势抄底，持仓者反弹减仓并设753.86止损，空仓者观望等待均线修复。",
+      "keyPoints": "空头排列，单日跌7.33%，负乖离-7.70%属破位，RSI 28.5超卖仅支持反弹，量能平量且筹码/新闻催化缺失",
+      "riskWarning": "空头排列下超卖反弹可能短暂且反复；若跌破753.86可能加速下跌；行情为fallback、技术partial、筹码缺失，结论置信度受限；ROE异常高需核实。",
+      "newsSummary": "近3日新闻以官网产品与支持页为主，无减持、处罚、业绩变脸等实质公告，信息含量低。",
+      "dashboard": {
+        "core_conclusion": {
+          "one_sentence": "空头排列加速下跌，反弹仅属超卖修复，减仓不抄底。",
+          "signal_type": "🔴卖出信号",
+          "time_sensitivity": "本周内",
+          "position_advice": {
+            "no_position": "空仓者不参与，等待价格重新站上MA5并形成多头排列后再评估。",
+            "has_position": "持仓者反弹至MA5附近减仓，跌破753.86坚决止损。"
+          }
+        },
+        "data_perspective": {
+          "trend_status": {
+            "ma_alignment": "空头排列：MA5<MA10<MA20",
+            "is_bullish": false,
+            "trend_score": 25
+          },
+          "price_position": {
+            "current_price": 776.22,
+            "ma5": 841.01,
+            "ma10": 857.07,
+            "ma20": 1037.74,
+            "bias_ma5": -7.7,
+            "bias_status": "危险（破位下跌）",
+            "support_level": 753.86,
+            "resistance_level": 841.01
+          },
+          "volume_analysis": {
+            "volume_ratio": null,
+            "volume_status": "平量",
+            "turnover_rate": null,
+            "volume_meaning": "成交量较昨日约1.01倍，属平量下跌，未放量恐慌但买盘承接不足，量能不支持反转。"
+          },
+          "chip_structure": {},
+          "chip_unavailable_reason": "筹码分布未启用或数据源暂不可用，未纳入筹码判断。"
+        },
+        "intelligence": {
+          "latest_news": "2026-11-18 检索结果以Sandisk官网产品页和支持页为主，未见重大公告或可交易催化。",
+          "risk_alerts": [
+            "2026-11-18 股价单日下跌7.33%并跌破所有均线，需警惕未披露消息或趋势资金撤离。",
+            "2026-11-18 新闻检索未见减持、处罚、业绩变脸等实质公告，但不排除信息滞后。"
+          ],
+          "positive_catalysts": [
+            "2026-11-18 公司官网发布USB-C闪存盘等常规产品信息，仅属日常经营动态，催化力度弱。"
+          ],
+          "earnings_outlook": "最近报告期2026-09-30：营收110.31亿、归母净利81.01亿，动态PE约6.2；ROE 141.17%异常偏高，需核实是否含一次性项目。近3日无业绩预告或快报，业绩预期数据有限。",
+          "sentiment_summary": "舆情清淡，无实质催化，技术破位主导情绪。"
+        },
+        "battle_plan": {
+          "sniper_points": {
+            "ideal_buy": "暂无买入点；若后续站稳MA5 841.01且均线转多，再评估回踩买点。",
+            "secondary_buy": "暂无；不设左侧抄底价。",
+            "stop_loss": "止损位：753.86元（跌破今日低点）。",
+            "take_profit": "反弹减仓目标：841.01元（MA5附近），强压力857.07元（MA10）。"
+          },
+          "position_strategy": {
+            "suggested_position": "持仓者降至3成以下；空仓者0成。",
+            "entry_plan": "不左侧抄底；等待价格站上MA5、MA10走平且MA5>MA10>MA20后再分批。",
+            "risk_control": "跌破753.86止损；反弹至841附近减仓；弱势中不补仓。"
+          },
+          "action_checklist": [
+            "❌ 检查项1：多头排列（MA5<MA10<MA20，空头排列）",
+            "⚠️ 检查项2：乖离率（负乖离-7.70%，非追高但属破位，不构成买点）",
+            "⚠️ 检查项3：量能配合（平量下跌，承接不足）",
+            "⚠️ 检查项4：无重大利空（新闻未见实质利空，但单日大跌需警惕）",
+            "⚠️ 检查项5：筹码健康（筹码数据不可用，无法判断）",
+            "✅ 检查项6：PE估值（动态PE约6.2，但ROE异常需核实）"
+          ]
+        },
+        "phase_decision": {
+          "phase_context": {
+            "phase": "postmarket",
+            "market": "us",
+            "market_local_time": "2026-11-18T20:22:44.879312-05:00",
+            "session_date": "2026-11-18",
+            "effective_daily_bar_date": "2026-11-18",
+            "is_trading_day": true,
+            "is_market_open_now": false,
+            "is_partial_bar": false,
+            "minutes_to_open": null,
+            "minutes_to_close": null,
+            "trigger_source": "cli",
+            "analysis_intent": "auto",
+            "warnings": []
+          },
+          "action_window": "盘后复盘",
+          "immediate_action": "止损止盈预警",
+          "watch_conditions": [
+            "次日是否跌破今日低点753.86",
+            "能否收复MA5 841.01",
+            "下跌是否放量、是否出现实质利空公告"
+          ],
+          "next_check_time": "2026-11-19 美股盘前及开盘后（美东时间）",
+          "confidence_reason": "行情为fallback、技术为partial、筹码缺失，数据质量限制使置信度不能为高。",
+          "data_limitations": [
+            "行情数据为降级源",
+            "技术指标部分可用",
+            "筹码分布数据缺失",
+            "quote: fallback",
+            "technical: partial"
+          ]
+        },
+        "signal_attribution": {
+          "technical_indicators": 42,
+          "news_sentiment": 5,
+          "fundamentals": 24,
+          "market_conditions": 29,
+          "strongest_bullish_signal": "RSI 28.5超卖，短线存在技术性反弹需求",
+          "strongest_bearish_signal": "MA5<MA10<MA20空头排列，单日下跌7.33%破位"
+        },
+        "decision_stability": {
+          "applied": false,
+          "reason": "资金流不可用，未使用资金流校准",
+          "capital_flow_status": "市场资金流服务暂不支持",
+          "current_price": 776.22,
+          "support": 753.86,
+          "resistance": 841.01,
+          "capital_flow_bias": "unavailable"
+        },
+        "sentiment_score": 33,
+        "operation_advice": "减仓",
+        "decision_type": "sell"
+      },
+      "plan": {
+        "idealBuy": 841.01,
+        "secondaryBuy": null,
+        "stopLoss": 753.86,
+        "takeProfit": 841.01
+      },
+      "createdAt": "2026-11-19 01:26:16.272853"
+    },
+    {
+      "code": "NVDA",
+      "name": "NVIDIA Corporation",
+      "reportType": "simple",
+      "sentimentScore": 28,
+      "trendPrediction": "看空",
+      "operationAdvice": "减仓",
+      "action": "reduce",
+      "actionLabel": "减仓",
+      "confidenceLevel": "中",
+      "currentPrice": 150.96,
+      "changePct": -6.5,
+      "modelUsed": "claude-smart-ops",
+      "analysisSummary": "NVDA收150.96美元、单日-6.5%，MA5/MA10/MA20（158.32/168.11/189.04）呈强势空头排列，趋势分10/100，满仓做多条件不成立。乖离率-4.65%无追高风险，但属弱势负乖离；1.03倍平量下跌而非缩量回调，抛压未释放。叠加黄仁勋离任、临时管理层与继任者寻聘未落地，治理不确定性上升。RSI 18.7超卖与动态PE 19.08仅提供反弹与估值支撑，属“基本面偏多、技术面尚未确认”，故给出减仓、反弹不追的结论。",
+      "keyPoints": "均线强势空头排列（MA5<MA10<MA20），趋势分仅10/100,单日-6.5%并跌破全部均线，150.40为今日低点关键支撑,平量下跌未缩量，抛压未充分释放,CEO黄仁勋离任、临时CEO接管、继任者未定，治理风险为核心变量,RSI 18.7超卖＋动态PE 19.08，仅支持反弹不支持反转",
+      "riskWarning": "①治理风险：CEO离任后由临时CEO接管，继任者仅处于接洽阶段，战略与客户关系存在断档可能；②技术风险：强势空头排列＋放量破位，150.40失守后无明确支撑；③人才风险：提前加薪与追加股权激励反映核心团队流失压力；④大盘风险：指数分化、VIX 24.56绝对水位偏高，风险偏好不稳；⑤数据风险：行情为降级数据、筹码数据缺失，判断精度受限。",
+      "newsSummary": "近3日消息集中于治理层面：2026-11-19 报道临时CEO科莱特·克雷斯承诺12月落地加薪与额外股权激励；同日报道董事会聘请Heidrick & Struggles寻聘继任者并已接洽Arm CEO Rene Haas；2026-11-19 华尔街见闻早餐指出英伟达拖累美股、标普五连跌。整体信息偏治理与人事，缺乏可用于交易的业绩或订单级催化。",
+      "dashboard": {
+        "core_conclusion": {
+          "one_sentence": "空头破位叠加CEO离任，反弹减仓不抄底",
+          "signal_type": "🔴卖出信号",
+          "time_sensitivity": "本周内",
+          "position_advice": {
+            "no_position": "空仓者：不参与。空头排列＋治理不确定，任何反弹都先视为反抽而非反转；需等价格重新站上MA5(158.32)并缩量回踩不破，才进入观察名单。",
+            "has_position": "持仓者：利用反弹降低仓位至1成以内。反弹至MA5(158.32)附近为主要减仓区；跌破150.40（今日低点）进一步减仓，止损146.00。"
+          }
+        },
+        "data_perspective": {
+          "trend_status": {
+            "ma_alignment": "空头排列：MA5(158.32) < MA10(168.11) < MA20(189.04)，均线发散下行，短期均线全面压制价格",
+            "is_bullish": false,
+            "trend_score": 10
+          },
+          "price_position": {
+            "current_price": 150.96,
+            "ma5": 158.32,
+            "ma10": 168.11,
+            "ma20": 189.04,
+            "bias_ma5": -4.65,
+            "bias_status": "警戒",
+            "support_level": 150.4,
+            "resistance_level": 158.32
+          },
+          "volume_analysis": {
+            "volume_ratio": "N/A（数据缺失）",
+            "volume_status": "平量",
+            "turnover_rate": "数据缺失",
+            "volume_meaning": "成交量为昨日1.03倍而股价重挫6.5%，属放量下跌、承接不足，尚未出现缩量止跌信号，抛压未充分释放"
+          },
+          "chip_structure": {},
+          "chip_unavailable_reason": "筹码分布未启用或数据源暂不可用，未纳入筹码判断。"
+        },
+        "intelligence": {
+          "latest_news": "【最新消息】2026-11-19：黄仁勋上周离任后，临时CEO科莱特·克雷斯在首次全员大会上承诺12月落地加薪与额外股权激励以稳定团队；董事会聘请Heidrick & Struggles物色继任者，已接洽Arm CEO Rene Haas。2026-11-19华尔街见闻早餐：英伟达拖累美股，标普五连跌、纳指逆势微涨。",
+          "risk_alerts": [
+            "2026-11-19 治理风险：CEO黄仁勋已离任，公司由临时CEO（原CFO科莱特·克雷斯）接管，董事会正通过猎头寻找继任者，战略连续性与执行力存在不确定性",
+            "2026-11-19 人才保留风险：临时CEO将加薪与追加股权激励提前至12月落地，反映领导层变动期核心人员流失压力已实质化",
+            "2026-11-18 技术性利空：单日下跌6.5%并创阶段新低，一举跌破MA5/MA10/MA20，属空头排列下的放量下跌"
+          ],
+          "positive_catalysts": [
+            "2026-11-19 管理层维稳：加薪与股权激励提前落地，短期有助于缓解团队动荡预期",
+            "2026-11-18 技术性超卖：RSI 18.7 处于超卖区，短线存在技术性反弹需求",
+            "2026-11-18 估值压缩：动态PE 19.08，较历史高估值区间明显回落，中长期性价比改善"
+          ],
+          "earnings_outlook": "最近报告期2026-07-31：营业收入962.21亿美元、归母净利润596.88亿美元、经营现金流240.77亿美元、ROE 117.2%，盈利能力仍强。但领导层交接期可能影响后续指引与客户信心，本次未获取到新的业绩预告或快报，业绩端暂时只能定性为“基本面偏多、技术面尚未确认”。",
+          "sentiment_summary": "舆情偏空，核心矛盾是CEO离任带来的治理不确定性叠加技术面破位下行。"
+        },
+        "battle_plan": {
+          "sniper_points": {
+            "ideal_buy": "暂不设买入点：需先站回MA5(158.32)上方并缩量回踩不破，方可视为趋势修复起点",
+            "secondary_buy": "148.00—150.40区间若出现缩量长下影止跌K线，仅允许1成以内试探性仓位（非趋势买点）",
+            "stop_loss": "止损位：146.00（跌破今日低点150.40并失守150整数关口后确认）",
+            "take_profit": "第一压力158.32（MA5）、第二压力168.11（MA10）；持仓者反弹至158附近即减仓，不作趋势目标价假设"
+          },
+          "position_strategy": {
+            "suggested_position": "建议仓位：0—1成（空仓者0成，持仓者降至1成以内）",
+            "entry_plan": "不向下摊薄、不在破位当日抢反弹。若价格在150.40—148.00缩量止跌，可用不超过1成仓位试探；只有收复MA5且回踩不破，才考虑加到3成。",
+            "risk_control": "单笔最大回撤控制在-3%以内；跌破146.00无条件离场；反弹中减仓优先于补仓，直到均线重新走平并出现多头排列雏形。"
+          },
+          "action_checklist": [
+            "❌ 检查项1：多头排列——不满足，MA5(158.32)<MA10(168.11)<MA20(189.04)，为强势空头排列",
+            "⚠️ 检查项2：乖离率——MA5乖离-4.65%，无追高风险，但属弱势负乖离，反弹性质待确认",
+            "❌ 检查项3：量能配合——1.03倍平量却下跌6.5%，放量下跌而非缩量回调",
+            "❌ 检查项4：无重大利空——CEO离任、临时管理层与继任者寻聘未落地，治理不确定性显著",
+            "⚠️ 检查项5：筹码健康——筹码分布数据缺失，无法判断获利盘与集中度",
+            "✅ 检查项6：PE估值合理——动态PE 19.08处于历史偏低区间（PB 23.33仍偏高）"
+          ]
+        },
+        "phase_decision": {
+          "phase_context": {
+            "phase": "postmarket",
+            "market": "us",
+            "market_local_time": "2026-11-18T20:22:44.879312-05:00",
+            "session_date": "2026-11-18",
+            "effective_daily_bar_date": "2026-11-18",
+            "is_trading_day": true,
+            "is_market_open_now": false,
+            "is_partial_bar": false,
+            "minutes_to_open": null,
+            "minutes_to_close": null,
+            "trigger_source": "cli",
+            "analysis_intent": "auto",
+            "warnings": []
+          },
+          "action_window": "盘后复盘",
+          "immediate_action": "等待确认",
+          "watch_conditions": [
+            "次日能否守住150.40（今日低点）与150整数关口，若失守则打开下行空间",
+            "反弹能否收复MA5(158.32)并缩量回踩不破，否则视为反抽",
+            "成交量能否萎缩至抛压衰竭水平（明显低于今日3.43亿股）",
+            "董事会是否公布继任CEO人选或明确管理层过渡安排",
+            "VIX能否回落至22以下、纳指与道指分化是否收敛"
+          ],
+          "next_check_time": "2026-11-19 美股开盘（美东09:30 / 北京时间22:30），盘前可先看盘前价与盘前成交量",
+          "confidence_reason": "行情为降级回退数据（realtime_provider_fallback）、技术指标为部分可用（intraday_realtime_overlay），且筹码数据缺失，故置信度定为中而非高。",
+          "data_limitations": [
+            "行情为fallback降级数据，盘后价格与盘中细节精度受限",
+            "技术指标为partial状态，量比/换手率缺失",
+            "筹码分布缺失，无法评估获利比例、平均成本与集中度",
+            "新闻均为二手聚合来源，且部分为盘后北京时间发布的次日稿件",
+            "quote: fallback"
+          ]
+        },
+        "signal_attribution": {
+          "technical_indicators": 36,
+          "news_sentiment": 30,
+          "fundamentals": 18,
+          "market_conditions": 16,
+          "strongest_bullish_signal": "RSI 18.7超卖叠加动态PE 19.08的低估值，具备技术性反弹条件",
+          "strongest_bearish_signal": "均线空头发散＋CEO离任治理风险叠加放量破位下跌"
+        },
+        "decision_stability": {
+          "applied": false,
+          "reason": "资金流不可用，未使用资金流校准",
+          "capital_flow_status": "市场资金流服务暂不支持",
+          "current_price": 150.96,
+          "support": 150.4,
+          "resistance": 158.32,
+          "capital_flow_bias": "unavailable"
+        },
+        "sentiment_score": 28,
+        "operation_advice": "减仓",
+        "decision_type": "sell"
+      },
+      "plan": {
+        "idealBuy": null,
+        "secondaryBuy": 1.0,
+        "stopLoss": 146.0,
+        "takeProfit": 158.32
+      },
+      "createdAt": "2026-11-19 01:27:08.047730"
+    },
+    {
+      "code": "MSFT",
+      "name": "Microsoft Corporation",
+      "reportType": "simple",
+      "sentimentScore": 45,
+      "trendPrediction": "震荡",
+      "operationAdvice": "观望",
+      "action": "watch",
+      "actionLabel": "观望",
+      "confidenceLevel": "中",
+      "currentPrice": 508.29,
+      "changePct": -0.29,
+      "modelUsed": "claude-smart-ops",
+      "analysisSummary": "MSFT收508.29跌0.29%，MA5<MA10<MA20空头排列，趋势强度仅25/100；乖离率-1.47%不算追高，但方向是弱势偏离。成交量缩至昨日0.71倍，抛压减轻却无承接。基本面ROE 34.22%、PE 26.53仍健康，字节跳动追加约5亿美元Azure合同属事件性利好但技术待确认。筹码数据缺失。结论：观望，500失守止损。",
+      "keyPoints": "均线空头排列未修复，乖离率-1.47%属安全但弱势，缩量回落无承接，Azure/OpenAI合同扩容消息面偏暖但事件先行、技术待确认，PE 26.53对应ROE 34.22%估值合理偏高",
+      "riskWarning": "①技术面空头排列，反弹受MA10(524.54)/MA20(526.10)压制，逆势做多胜率低；②VIX 24.56绝对水位偏高、道指跌1.11%，大盘主线不一致，高估值科技股易被杀估值；③筹码分布数据缺失，无法验证套牢盘与获利盘结构；④行情为降级数据源、技术指标部分可用，盘中数据可能与实际存在偏差；⑤跌破501.08前低将打开下行空间。",
+      "newsSummary": "近3日有效信息两条且均为2026-11-18：①The Information报道字节跳动拟将Azure用于OpenAI模型的云服务合同增加约5亿美元（需求侧利好）；②微软商业业务CEO阿尔索夫称英伟达治理风波或促使客户考虑替代AI芯片，微软、亚马逊、谷歌均在自研（中性偏多）。其余检索结果为官网介绍类页面或发布于2026-06-29，超出3日窗口，已按规则忽略。",
+      "dashboard": {
+        "core_conclusion": {
+          "one_sentence": "均线空头排列未修复，空仓等右侧信号，持仓守500关口",
+          "signal_type": "🟡持有观望",
+          "time_sensitivity": "不急",
+          "position_advice": {
+            "no_position": "空仓者：暂不买入。等MA5走平并上穿MA10、或回踩500-501前低区缩量止跌后再考虑轻仓（不超过2成）试仓；当前空头排列下任何反弹都不追。",
+            "has_position": "持仓者：以500.00（今日低点501.08下方）为硬止损，反弹至524.5-526.1（MA10/MA20）附近若量能不配合则逢高减一档，仓位控制在5成以内。"
+          }
+        },
+        "data_perspective": {
+          "trend_status": {
+            "ma_alignment": "空头排列：MA5(515.88) < MA10(524.54) < MA20(526.10)，均线自下而上压制，趋势强度仅25/100",
+            "is_bullish": false,
+            "trend_score": 25
+          },
+          "price_position": {
+            "current_price": 508.29,
+            "ma5": 515.88,
+            "ma10": 524.54,
+            "ma20": 526.1,
+            "bias_ma5": -1.47,
+            "bias_status": "安全",
+            "support_level": 501.08,
+            "resistance_level": 524.54
+          },
+          "volume_analysis": {
+            "volume_ratio": "数据缺失，无法判断",
+            "volume_status": "缩量",
+            "turnover_rate": "数据缺失，无法判断",
+            "volume_meaning": "成交量2134.93万股、约为昨日0.71倍，属缩量回落，说明抛压未集中释放，但也没有承接放量的迹象，属“跌而不慌、也无人抢筹”的僵持量能。"
+          },
+          "chip_structure": {},
+          "chip_unavailable_reason": "筹码分布未启用或数据源暂不可用，未纳入筹码判断。"
+        },
+        "intelligence": {
+          "latest_news": "【最新消息】2026-11-18 据The Information报道，字节跳动正与微软洽谈，拟将用于OpenAI模型的Azure云服务合同金额再增加约5亿美元；同日微软商业业务CEO阿尔索夫表示，英伟达治理风波可能促使客户考虑其AI芯片的替代方案。近3日无公司层面重大负面公告。",
+          "risk_alerts": [
+            "2026-11-18 大盘结构分化：纳指涨0.42%但道指跌1.11%，强弱差超1.5个百分点，主线不一致，指数层面缺乏合力",
+            "2026-11-18 VIX收于24.56（跌3.53%），波动率虽回落但绝对水位仍在24以上，市场仍在为波动定价，高估值科技股承压",
+            "技术面风险（非新闻）：MA5<MA10<MA20空头排列，反弹面临524.5-526.1双均线压制"
+          ],
+          "positive_catalysts": [
+            "2026-11-18 字节跳动拟将Azure上用于OpenAI模型的云服务合同增加约5亿美元，指向Azure AI算力需求仍在扩张",
+            "2026-11-18 微软高管表态英伟达治理风波或推动客户转向自研/替代AI芯片，微软自研芯片路线具备叙事弹性"
+          ],
+          "earnings_outlook": "最近报告期2026-09-30：营业收入922.79亿美元、归母净利润366.29亿美元、经营现金流580亿美元，ROE 34.22%，盈利能力与现金流质量维持高位；但现有摘要未提供下一季度指引或业绩预告，业绩预期数据缺失，无法判断边际增速变化。",
+          "sentiment_summary": "消息面偏暖但属事件性催化，技术面仍处空头排列，舆情未形成可交易的确定性买点。"
+        },
+        "battle_plan": {
+          "sniper_points": {
+            "ideal_buy": "理想买入点：暂不适用（空头排列禁止左侧买入）。右侧条件成立后参考505.00-508.00区间分批介入，需MA5上穿MA10确认",
+            "secondary_buy": "次优买入点：500.00-501.08（今日低点/前低支撑区）缩量止跌可轻仓试错",
+            "stop_loss": "止损位：495.00（跌破501.08前低约1.2%即离场，避免空头排列加速）",
+            "take_profit": "目标位：524.54（MA10）为第一压力，526.10（MA20）为强压力；有效放量突破526.10再看前高"
+          },
+          "position_strategy": {
+            "suggested_position": "建议仓位：空仓者0成等待；持仓者不超过5成",
+            "entry_plan": "分两批：首批仅在500-501区域缩量企稳后以1-2成试仓；第二批需MA5上穿MA10且当日放量（量比>1.2）突破515.88（MA5）后追加至3成以内。空头排列期间总仓位上限3成。",
+            "risk_control": "单笔亏损上限设为成本的5%；跌破495.00无条件止损；反弹至524.5-526.1若无量能配合先减半仓；不加杠杆、不逆势摊平。"
+          },
+          "action_checklist": [
+            "❌ 检查项1：多头排列 —— MA5(515.88)<MA10(524.54)<MA20(526.10)，空头排列，做多首要条件不满足",
+            "✅ 检查项2：乖离率合理 —— 相对MA5为-1.47%，未超5%，不存在追高风险（但方向为弱势偏离）",
+            "⚠️ 检查项3：量能配合 —— 成交量为昨日0.71倍，缩量回落，抛压减轻但无放量承接，属中性偏弱",
+            "✅ 检查项4：无重大利空 —— 近3日无减持、处罚、业绩变脸等公告性利空，仅大盘波动率偏高",
+            "⚠️ 检查项5：筹码健康 —— 筹码分布数据缺失，无法判断，不纳入加分项",
+            "✅ 检查项6：PE估值合理 —— 动态PE 26.53、PB 8.02、股息率0.72%，对高ROE(34.22%)的软件龙头属合理偏高区间，不构成卖出理由"
+          ]
+        },
+        "phase_decision": {
+          "phase_context": {
+            "phase": "postmarket",
+            "market": "us",
+            "market_local_time": "2026-11-18T20:22:44.879312-05:00",
+            "session_date": "2026-11-18",
+            "effective_daily_bar_date": "2026-11-18",
+            "is_trading_day": true,
+            "is_market_open_now": false,
+            "is_partial_bar": false,
+            "minutes_to_open": null,
+            "minutes_to_close": null,
+            "trigger_source": "cli",
+            "analysis_intent": "auto",
+            "warnings": []
+          },
+          "action_window": "盘后复盘",
+          "immediate_action": "无盘中动作",
+          "watch_conditions": [
+            "明日能否守住501.08今日低点，若失守则确认空头排列延续，直接放弃观察",
+            "MA5(515.88)是否走平并出现上穿MA10(524.54)的右侧信号",
+            "反弹至524.5-526.1压力区时成交量能否放大至1.2倍以上",
+            "VIX能否回落至22以下、纳指与道指能否同向，作为仓位放行的前提"
+          ],
+          "next_check_time": "2026-11-19 美东时间 09:30 开盘后30分钟（北京时间22:00前后）",
+          "confidence_reason": "行情数据为fallback降级来源、技术指标为partial（含盘中叠加），且筹码分布缺失、量比与换手率为空，数据质量82/100；按规则置信度不得为高，故取“中”。",
+          "data_limitations": [
+            "实时行情为降级fallback，量比/换手率/流通市值缺失，量能只能依赖成交量倍数近似判断",
+            "技术指标为partial，盘中叠加数据可能造成均线与RSI的微小偏差",
+            "筹码分布模块不可用，获利比例、平均成本、集中度均无法计算",
+            "quote: fallback",
+            "technical: partial"
+          ]
+        },
+        "signal_attribution": {
+          "technical_indicators": 30,
+          "news_sentiment": 21,
+          "fundamentals": 33,
+          "market_conditions": 16,
+          "strongest_bullish_signal": "基本面强韧（ROE 34.22%、单季净利366亿美元）叠加Azure/OpenAI合同扩容需求",
+          "strongest_bearish_signal": "MA5<MA10<MA20空头排列、趋势强度仅25/100，反弹受压于524.5-526.1双均线"
+        },
+        "decision_stability": {
+          "applied": false,
+          "reason": "资金流不可用，未使用资金流校准",
+          "capital_flow_status": "市场资金流服务暂不支持",
+          "current_price": 508.29,
+          "support": 501.08,
+          "resistance": 524.54,
+          "capital_flow_bias": "unavailable"
+        },
+        "sentiment_score": 45,
+        "operation_advice": "观望",
+        "decision_type": "hold"
+      },
+      "plan": {
+        "idealBuy": null,
+        "secondaryBuy": 501.08,
+        "stopLoss": 495.0,
+        "takeProfit": 524.54
+      },
+      "createdAt": "2026-11-19 01:27:47.795185"
+    },
+    {
+      "code": "SPCX",
+      "name": "Space Exploration Technologies ",
+      "reportType": "simple",
+      "sentimentScore": 50,
+      "trendPrediction": "震荡",
+      "operationAdvice": "观望",
+      "action": "watch",
+      "actionLabel": "观望",
+      "confidenceLevel": "中",
+      "currentPrice": 143.5,
+      "changePct": 0.17,
+      "modelUsed": "claude-smart-ops",
+      "analysisSummary": "SPCX收143.5元基本平收，MA5>MA10但MA10仍低于MA20，属弱势多头而非标准多头排列；乖离MA5仅+2.26%处安全区，但成交量为昨日0.84倍、缩量整理未见放量突破。筹码数据缺失，动态PE高达约623.9倍，大盘指数方向不一致且VIX 24以上。综合给予50分观望：不追高，等回踩140.30元缩量企稳轻仓试探，跌破137.50元止损。",
+      "keyPoints": "MA5>MA10属弱势多头但MA10≤MA20排列未完成,乖离率+2.26%处安全区但非最佳买点,缩量整理（0.84倍）等待放量突破146.30元,动态PE约623.9倍估值极高需业绩高增长消化,筹码与量比换手数据缺失需谨慎",
+      "riskWarning": "①估值风险极高：动态PE约623.9倍、PB约11.02倍，情绪或预期一旦反转回撤幅度会显著放大；②均线结构不完整，MA10仍在MA20下方，若跌破137.50元支撑带将转为空头排列；③大盘环境偏谨慎，道指跌1.11%与纳指涨0.42%方向背离，VIX 24.56绝对水位偏高；④新闻与个股相关度极低，存在信息盲区，可能漏掉减持、监管或订单变化等关键事件；⑤行情为降级源、技术指标部分可用、筹码数据缺失，本报告不构成重仓依据。",
+      "newsSummary": "近3日检索到11条结果，绝大多数为Space.com、SpaceX专题页、NASA及百科类泛内容，未命中公司全称或代码，相关度标记为sector_related_news。唯一含公司信息的是2026-11-19马斯克称SpaceX正开发AI模型Grok 4.8，属叙事类消息、非财务催化。未发现减持、处罚、业绩变脸等负面公告，但信息覆盖不足，需以“无消息”而非“无风险”对待。",
+      "dashboard": {
+        "core_conclusion": {
+          "one_sentence": "弱势多头未成排列，等回踩MA5缩量企稳再轻仓",
+          "signal_type": "🟡持有观望",
+          "time_sensitivity": "本周内",
+          "position_advice": {
+            "no_position": "空仓者不追当前143.5元，等待回踩140.30元（MA5）附近且缩量收稳后再轻仓介入，首笔不超过2成；若直接放量上攻146.30元不追，等突破回踩确认。",
+            "has_position": "持仓者以持有为主，仓位偏重者可在146元附近压力位减1成；跌破138.40元（MA10）减仓，跌破137.50元止损离场。"
+          }
+        },
+        "data_perspective": {
+          "trend_status": {
+            "ma_alignment": "弱势多头：MA5(140.32)>MA10(138.44)，但MA10仍低于MA20(140.48)，MA20尚未被有效翻越，不构成标准多头排列",
+            "is_bullish": false,
+            "trend_score": 55
+          },
+          "price_position": {
+            "current_price": 143.5,
+            "ma5": 140.32,
+            "ma10": 138.44,
+            "ma20": 140.48,
+            "bias_ma5": 2.26,
+            "bias_status": "安全",
+            "support_level": 140.32,
+            "resistance_level": 146.3
+          },
+          "volume_analysis": {
+            "volume_ratio": "数据缺失，无法判断",
+            "volume_status": "缩量",
+            "turnover_rate": "数据缺失，无法判断",
+            "volume_meaning": "成交量约为昨日0.84倍，价格基本平收（+0.17%），属于缩量整理，抛压不重但也没有资金主动攻击，需放量突破146.30元才能确认上攻。"
+          },
+          "chip_structure": {},
+          "chip_unavailable_reason": "筹码分布未启用或数据源暂不可用，未纳入筹码判断。"
+        },
+        "intelligence": {
+          "latest_news": "【最新消息】2026-11-19 马斯克在奥斯汀TomorrowX峰会称SpaceX正在开发AI模型Grok 4.8（同场亦提及特斯拉Optimus机器人演示）；2026-11-18 检索到的其余条目均为Space.com、SpaceX专题页等泛行业站点内容，未命中SPCX个股实质信息。近3日无公司层面公告、订单或业绩披露。",
+          "risk_alerts": [
+            "2026-11-18 未检索到减持、处罚、业绩变脸等个股负面公告，但新闻与公司相关性极低（均标记为sector_related_news），存在信息盲区，不代表无风险",
+            "估值风险：动态市盈率约623.9倍、市净率约11.02倍，处于极高水位，任何预期修正都可能放大波动",
+            "大盘环境偏谨慎：2026-11-18 道指跌1.11%、标普微跌0.23%，仅纳指涨0.42%，指数方向不一致且VIX达24.56，风险偏好未真正修复"
+          ],
+          "positive_catalysts": [
+            "2026-11-19 马斯克提及SpaceX正在开发AI模型Grok 4.8，属公司层面叙事延伸（非财务催化）",
+            "2026-09-30报告期基本面数据：营业收入145.75亿元、归母净利润44.04亿元、经营现金流96.31亿元，经营性现金流显著高于净利润，盈利质量结构尚可"
+          ],
+          "earnings_outlook": "最近报告期2026-09-30的营收、净利与经营现金流均为正且现金流优于利润，但数据源未提供ROE与业绩预告，无法判断增长斜率；在623.9倍动态PE下，业绩需要极高增速才能消化估值，属于“高预期定价”状态。",
+          "sentiment_summary": "个股舆情清淡且相关度低，情绪中性偏观望，缺乏可交易的催化。"
+        },
+        "battle_plan": {
+          "sniper_points": {
+            "ideal_buy": "理想买入点：140.30元（回踩MA5不破且缩量收稳）",
+            "secondary_buy": "次优买入点：138.45元（回踩MA10获支撑）",
+            "stop_loss": "止损位：137.50元（跌破MA10与MA20支撑区约2%，趋势转弱离场）",
+            "take_profit": "目标位：146.30元（今日高点压力），有效突破后看150.00元整数关口"
+          },
+          "position_strategy": {
+            "suggested_position": "建议仓位：1-2成（试探性轻仓）",
+            "entry_plan": "不追现价143.5元。方案一：回踩140.30元附近缩量收稳建1成，站稳后加至2成；方案二：放量突破146.30元后回踩确认再建1成。两方案均不重仓。",
+            "risk_control": "单笔亏损控制在总资金1%以内；跌破137.50元无条件止损；若大盘VIX重回28以上或指数同步走弱，暂停加仓并同步降仓。"
+          },
+          "action_checklist": [
+            "⚠️ 检查项1：多头排列 — 弱势多头，MA5>MA10但MA10≤MA20(140.48)，未完成MA5>MA10>MA20标准排列",
+            "✅ 检查项2：乖离率合理 — 乖离MA5仅+2.26%，处于2-5%可小仓区间，无追高风险",
+            "⚠️ 检查项3：量能配合 — 成交量为昨日0.84倍属缩量整理，量比与换手率数据缺失，尚未出现放量突破",
+            "⚠️ 检查项4：无重大利空 — 近3日未见减持/处罚/业绩变脸，但新闻与个股相关度低，信息覆盖不足",
+            "⚠️ 检查项5：筹码健康 — 筹码分布数据缺失，无法判断获利盘与集中度",
+            "❌ 检查项6：PE估值合理 — 动态PE约623.9倍、PB约11.02倍，估值极高"
+          ]
+        },
+        "phase_decision": {
+          "phase_context": {
+            "phase": "postmarket",
+            "market": "us",
+            "market_local_time": "2026-11-18T20:22:44.879312-05:00",
+            "session_date": "2026-11-18",
+            "effective_daily_bar_date": "2026-11-18",
+            "is_trading_day": true,
+            "is_market_open_now": false,
+            "is_partial_bar": false,
+            "minutes_to_open": null,
+            "minutes_to_close": null,
+            "trigger_source": "cli",
+            "analysis_intent": "auto",
+            "warnings": []
+          },
+          "action_window": "盘后复盘",
+          "immediate_action": "观察",
+          "watch_conditions": [
+            "次日开盘是否守住MA5（140.32元）与MA20（140.48元）这一重合支撑带",
+            "能否放量突破146.30元并回踩不破，形成有效突破结构",
+            "MA10（138.44元）能否上穿MA20（140.48元），完成多头排列补全",
+            "大盘纳指与VIX是否同向修复（VIX回落至22以下为佳）"
+          ],
+          "next_check_time": "2026-11-19 美股开盘后30分钟（美东09:30-10:00）复核",
+          "confidence_reason": "行情数据为fallback、技术指标partial（含盘中实时叠加），筹码数据缺失，新闻与个股相关度极低，故置信度定为中，不给高。",
+          "data_limitations": [
+            "行情源降级（realtime_provider_fallback），收盘价与涨跌幅口径需次日复核",
+            "技术指标为部分可用（intraday_realtime_overlay），量比、换手率缺失",
+            "筹码分布数据缺失，无法评估获利盘与集中度",
+            "日涨跌幅0.17%与“价格较昨日变化4.47%”口径不一致，短期动量判断需谨慎",
+            "新闻检索结果均为泛行业内容，未命中公司全称或代码，事件面参考价值有限"
+          ]
+        },
+        "signal_attribution": {
+          "technical_indicators": 35,
+          "news_sentiment": 16,
+          "fundamentals": 26,
+          "market_conditions": 23,
+          "strongest_bullish_signal": "MA5上穿MA10形成弱势多头，价格站稳MA5之上且乖离仅+2.26%",
+          "strongest_bearish_signal": "动态PE约623.9倍估值极高，且均线未完成MA5>MA10>MA20多头排列"
+        },
+        "decision_stability": {
+          "applied": false,
+          "reason": "资金流不可用，未使用资金流校准",
+          "capital_flow_status": "市场资金流服务暂不支持",
+          "current_price": 143.5,
+          "support": 140.32,
+          "resistance": 146.3,
+          "capital_flow_bias": "unavailable"
+        },
+        "sentiment_score": 50,
+        "operation_advice": "观望",
+        "decision_type": "hold"
+      },
+      "plan": {
+        "idealBuy": 140.3,
+        "secondaryBuy": 138.45,
+        "stopLoss": 137.5,
+        "takeProfit": 146.3
+      },
+      "createdAt": "2026-11-19 01:28:30.263593"
+    },
+    {
+      "code": "APLD",
+      "name": "Applied Digital Corporation",
+      "reportType": "simple",
+      "sentimentScore": 25,
+      "trendPrediction": "看空",
+      "operationAdvice": "减仓",
+      "action": "reduce",
+      "actionLabel": "减仓",
+      "confidenceLevel": "中",
+      "currentPrice": 14.45,
+      "changePct": -5.37,
+      "modelUsed": "claude-smart-ops",
+      "analysisSummary": "APLD 收 14.45 元跌 5.37%，MA5<MA10<MA20 强势空头排列，均线发散下行，趋势强度仅 10/100。放量下跌显示抛压未消化，筹码数据缺失、消息面真空，动态 PE 因亏损不适用。虽乖离率 -5.15% 未触发追高红线、RSI 35.9 有反弹需求，但属逃命反弹性质，不构成买点。结论：空仓不建仓，持仓反弹减仓，止损 13.73 元。",
+      "keyPoints": "① MA5(15.23)<MA10(15.72)<MA20(17.01) 空头排列，不满足多头条件；② MA5 乖离率 -5.15%，未超 5% 但处破位方向，非买点；③ 1.21 倍放量下跌，量能不配合；④ 筹码分布数据缺失，无法判断结构健康度；⑤ 近 3 日无有效个股新闻，但报告期 2026-08-31 归母净利润 -2.37 亿美元构成基本面压制",
+      "riskWarning": "主要风险：①趋势风险——强势空头排列且均线发散下行，反弹易夭折，抄底极易被套；②量价风险——放量下跌意味着抛压未衰竭，跌破 13.73 元可能加速下行；③基本面风险——报告期归母净利润 -2.37 亿美元、ROE -13.62%，动态 PE 不适用，估值缺乏盈利支撑，PB 2.68 倍在亏损状态下安全边际不可验证；④数据风险——行情为降级来源、技术指标部分可用、筹码与消息面缺失，本报告判断精细度受限，不可据此重仓；⑤环境风险——大盘 risk 标签为 conservative，VIX 24.56 仍处高位，指数内部分化超 1.5 个百分点，风险偏好不稳。",
+      "newsSummary": "近 3 日（2026-11-16 至 2026-11-18）新闻检索未获得与 Applied Digital Corporation（APLD）相关的有效信息。返回结果包括 2026-11-17 一条 Applied Materials 公司简介，以及多条英文单词“applied”的词典释义页面，均未命中股票代码或公司全称，关联度评分为 0，属背景噪声。因此本期消息面实质为空白，既无确认利好催化，也无确认减持、处罚或业绩变脸等利空，新闻维度对评分的贡献接近中性偏低。",
+      "dashboard": {
+        "core_conclusion": {
+          "one_sentence": "空头排列放量下跌，反弹兑现为主，勿抄底",
+          "signal_type": "🔴卖出信号",
+          "time_sensitivity": "本周内",
+          "position_advice": {
+            "no_position": "空仓者不建议建仓。该股票处于 MA5<MA10<MA20 的强势空头排列，均线发散下行，趋势强度仅 10/100。务必等待三项确认后再考虑：①收盘价收复 MA5（15.23）并连续 2 日站稳；②MA5 走平翘头、均线由空头转为缠绕；③回踩 MA5 缩量不破。确认前任何反弹都视为逃命反弹，不作为买点。",
+            "has_position": "持仓者建议利用反弹减仓至 1-2 成观察仓。优先在反弹至 MA5（15.23）附近减第一笔，反弹至 MA10（15.72）附近再减。若明日跌破今日低点 13.73 且放量，应无条件清出剩余仓位，不做摊薄补仓。"
+          }
+        },
+        "data_perspective": {
+          "trend_status": {
+            "ma_alignment": "空头排列：MA5(15.23) < MA10(15.72) < MA20(17.01)，三线发散下行",
+            "is_bullish": false,
+            "trend_score": 10
+          },
+          "price_position": {
+            "current_price": 14.45,
+            "ma5": 15.23,
+            "ma10": 15.72,
+            "ma20": 17.01,
+            "bias_ma5": -5.15,
+            "bias_status": "危险",
+            "support_level": 13.73,
+            "resistance_level": 15.23
+          },
+          "volume_analysis": {
+            "volume_ratio": null,
+            "volume_status": "放量",
+            "turnover_rate": null,
+            "volume_meaning": "成交量 2474.57 万股，约为上一交易日的 1.21 倍，而股价下跌 5.37%，属于典型的放量下跌，说明抛压仍在释放、承接力量不足，而非缩量回调的健康形态。量比与换手率数据缺失，无法进一步量化。"
+          },
+          "chip_structure": {},
+          "chip_unavailable_reason": "筹码分布未启用或数据源暂不可用，未纳入筹码判断。"
+        },
+        "intelligence": {
+          "latest_news": "近3日（2026-11-16 至 2026-11-18）未检索到与 Applied Digital Corporation（APLD）直接相关的有效新闻。检索结果仅有 2026-11-17 一条关于 Applied Materials 的公司简介，以及大量无关的英文单词释义页面，均未命中股票代码或公司全称，属背景噪声，不可作为交易依据。因此消息面实质为空，无法提供催化或利空判断。",
+          "risk_alerts": [
+            "财务亏损（报告期 2026-08-31）：归母净利润 -2.37 亿美元，ROE -13.62%，公司尚处亏损扩张阶段，盈利能力未验证",
+            "趋势风险（技术面，2026-11-18）：空头排列且均线发散下行，趋势强度仅 10/100，系统给出强烈卖出信号",
+            "量价风险（2026-11-18）：下跌 5.37% 伴随 1.21 倍放量，属于放量下跌，抛压未消化完毕"
+          ],
+          "positive_catalysts": [
+            "现金流为正（报告期 2026-08-31）：经营活动现金流 6392 万美元为正，短期经营造血能力尚可",
+            "营收体量（报告期 2026-08-31）：营业收入 3.42 亿美元，AI 数据中心与高性能计算业务具备规模基础"
+          ],
+          "earnings_outlook": "最新结构化财报报告期为 2026-08-31：营业收入 3.42 亿美元、归母净利润 -2.37 亿美元、经营现金流 +6392 万美元、ROE -13.62%，呈现“收入有规模、利润仍为负、现金流为正”的扩张期特征。动态市盈率为 N/A（因亏损不适用），市净率 2.68 倍。近 3 日无业绩预告或业绩快报检索结果，业绩预期数据缺失，无法判断下一报告期方向。",
+          "sentiment_summary": "消息面实质空白，舆情由技术面的空头趋势主导，情绪偏弱。"
+        },
+        "battle_plan": {
+          "sniper_points": {
+            "ideal_buy": "当前不具备买入条件。观察型理想买点：收盘价收复 MA5 15.23 元并站稳 2 个交易日后，回踩 15.20-15.30 元缩量不破可小仓试探",
+            "secondary_buy": "次优观察点：13.73-14.00 元区间（今日低点）出现缩量止跌并收出长下影，仅作观察，不主动左侧接刀",
+            "stop_loss": "止损位：13.73 元（跌破今日最低价即离场；持仓者亦可参考 14.00 元整数关口作为预警线）",
+            "take_profit": "反弹减仓目标位：第一目标 15.23 元（MA5），第二目标 15.72 元（MA10），17.01 元（MA20）为中期强压力，暂不作为可达目标"
+          },
+          "position_strategy": {
+            "suggested_position": "建议仓位：0-2 成（仅限已有持仓者的观察仓），空仓者 0 成",
+            "entry_plan": "不新建仓位。持仓者分两批减持：反弹至 MA5 15.23 元附近减一半，反弹至 MA10 15.72 元附近再减一半；若未反弹而直接跌破 13.73 元，则一次性清仓，不做逆势摊薄。",
+            "risk_control": "单票风险敞口不超过总资金的 5%。严格执行 13.73 元止损；若出现放量长阴跌破前低，禁止任何补仓摊薄行为；大盘处于 conservative 风险标签、VIX 24.56 高位，需同步压缩整体仓位。"
+          },
+          "action_checklist": [
+            "❌ 检查项1 多头排列：MA5(15.23) < MA10(15.72) < MA20(17.01)，为强势空头排列，不满足 MA5>MA10>MA20 必要条件",
+            "⚠️ 检查项2 乖离率：MA5 乖离率 -5.15%（向下偏离），虽未触发“追高”红线，但属于空头趋势中的破位信号，不是买点",
+            "❌ 检查项3 量能配合：1.21 倍放量下跌 5.37%，为放量杀跌而非缩量回调，量能不配合",
+            "⚠️ 检查项4 重大利空：近 3 日无确认的减持/处罚/业绩变脸新闻（消息检索实质无效），但亏损财报构成基本面压制",
+            "❌ 检查项5 筹码健康：筹码分布数据缺失，获利比例、平均成本、集中度均无法判断",
+            "⚠️ 检查项6 估值：动态 PE 为 N/A（亏损不适用），PB 2.68 倍，亏损状态下估值安全边际无法验证"
+          ]
+        },
+        "phase_decision": {
+          "phase_context": {
+            "phase": "postmarket",
+            "market": "us",
+            "market_local_time": "2026-11-18T20:22:44.879312-05:00",
+            "session_date": "2026-11-18",
+            "effective_daily_bar_date": "2026-11-18",
+            "is_trading_day": true,
+            "is_market_open_now": false,
+            "is_partial_bar": false,
+            "minutes_to_open": null,
+            "minutes_to_close": null,
+            "trigger_source": "cli",
+            "analysis_intent": "auto",
+            "warnings": []
+          },
+          "action_window": "盘后复盘",
+          "immediate_action": "止损止盈预警",
+          "watch_conditions": [
+            "明日能否收复 MA5 15.23 元并收盘站稳（收复仅为修复信号，不改空头结构）",
+            "是否跌破今日低点 13.73 元，若放量跌破则确认趋势加速下行",
+            "反弹时成交量能否萎缩、下跌时成交量能否收缩，判断抛压是否衰竭",
+            "是否有 APLD 自身的公司公告（融资、订单、股东变动）出现，改变当前消息真空状态"
+          ],
+          "next_check_time": "2026-11-19 09:30（美东时间）开盘后首 30 分钟",
+          "confidence_reason": "行情数据为 fallback 降级来源、技术指标为 partial（含盘中实时叠加）、筹码数据缺失，按规则置信度不得为高，故定为中等。",
+          "data_limitations": [
+            "行情块状态为 fallback（realtime_provider_fallback），量比与换手率缺失",
+            "技术指标块状态为 partial（intraday_realtime_overlay），趋势判定仅供参考",
+            "筹码分布未启用（chip_distribution_missing），获利比例/平均成本/集中度全部无法评估",
+            "近 3 日新闻检索结果与标的无关，消息面实质缺失，无法验证潜在利空或催化",
+            "quote: fallback"
+          ]
+        },
+        "signal_attribution": {
+          "technical_indicators": 72,
+          "news_sentiment": 3,
+          "fundamentals": 15,
+          "market_conditions": 10,
+          "strongest_bullish_signal": "RSI 约 35.9 处于弱势区，且经营现金流为正，具备技术性超跌反弹条件",
+          "strongest_bearish_signal": "MA5<MA10<MA20 强势空头排列叠加 1.21 倍放量下跌 5.37%，趋势强度仅 10/100"
+        },
+        "decision_stability": {
+          "applied": false,
+          "reason": "资金流不可用，未使用资金流校准",
+          "capital_flow_status": "市场资金流服务暂不支持",
+          "current_price": 14.45,
+          "support": 13.73,
+          "resistance": 15.23,
+          "capital_flow_bias": "unavailable"
+        },
+        "sentiment_score": 25,
+        "operation_advice": "减仓",
+        "decision_type": "sell"
+      },
+      "plan": {
+        "idealBuy": 15.23,
+        "secondaryBuy": 14.0,
+        "stopLoss": 13.73,
+        "takeProfit": 15.23
+      },
+      "createdAt": "2026-11-19 01:29:42.705300"
+    },
+    {
+      "code": "AAPL",
+      "name": "Apple Inc.",
+      "reportType": "simple",
+      "sentimentScore": 59,
+      "trendPrediction": "看多",
+      "operationAdvice": "持有观察",
+      "action": "hold",
+      "actionLabel": "持有",
+      "confidenceLevel": "低",
+      "currentPrice": 352.45,
+      "changePct": 0.48,
+      "modelUsed": "claude-smart-ops",
+      "analysisSummary": "AAPL 收352.45，MA5>MA10>MA20多头排列，乖离-0.34%属安全回踩区，缩量整理抛压轻；但量能未放大、筹码数据缺失、PE 39偏高，且大盘分化VIX偏高，故为轻仓分批买入而非追高。",
+      "keyPoints": "多头排列成立, 乖离-0.34%安全回踩, 缩量整理待放量确认, 无公司级利空, PE 39.25估值偏高",
+      "riskWarning": "行情为降级数据源、技术指标部分可用、筹码分布缺失，量价精度受限；若跌破MA20（347.49）则多头结构破坏应止损；大盘分化叠加VIX 24.56，权重股仍有回撤压力；高估值意味业绩或指引不及预期将放大跌幅。；市场资金流服务暂不支持，买入结论缺少资金面确认，先按观察处理。",
+      "newsSummary": "近3日公司层面无重大新闻，仅2026-11-18 Apple Store Online 分期租赁推广等背景信息；宏观侧2026-11-18 美股指数分化、软件股承压，市场焦点在英伟达财报，苹果缺乏事件驱动。",
+      "dashboard": {
+        "core_conclusion": {
+          "one_sentence": "持有观察：市场资金流服务暂不支持，买入结论缺少资金面确认，先按观察处理。",
+          "signal_type": "🟡持有观望",
+          "time_sensitivity": "本周内",
+          "position_advice": {
+            "no_position": "空仓先不追买，等待资金流恢复、支撑确认或有效突破后再行动。",
+            "has_position": "持仓以关键支撑为风控线，资金流恢复前控制仓位。"
+          }
+        },
+        "data_perspective": {
+          "trend_status": {
+            "ma_alignment": "多头排列：MA5(353.66) > MA10(350.83) > MA20(347.49)，均线发散上行",
+            "is_bullish": true,
+            "trend_score": 75
+          },
+          "price_position": {
+            "current_price": 352.45,
+            "ma5": 353.66,
+            "ma10": 350.83,
+            "ma20": 347.49,
+            "bias_ma5": -0.34,
+            "bias_status": "安全",
+            "support_level": 350.83,
+            "resistance_level": 356.42
+          },
+          "volume_analysis": {
+            "volume_ratio": "数据缺失，无法判断",
+            "volume_status": "缩量",
+            "turnover_rate": "数据缺失，无法判断",
+            "volume_meaning": "成交量降至昨日0.66倍、价格基本走平，属缩量整理，抛压不重但也没有放量突破的资金确认，需次日量能验证。"
+          },
+          "chip_structure": {},
+          "chip_unavailable_reason": "筹码分布未启用或数据源暂不可用，未纳入筹码判断。"
+        },
+        "intelligence": {
+          "latest_news": "【最新消息】近3日无公司层面重大消息：2026-11-18 仅见 Apple Store Online 分期租赁（Apple Upgrade）推广页面，属背景级信息；2026-11-18 宏观层面标普、纳指延续弱势、软件股承压，资金焦点集中在英伟达财报，苹果自身缺乏事件催化。",
+          "risk_alerts": [
+            "2026-11-18 宏观风险：美股主要指数走势分化（道指-1.11%、标普-0.23%、纳指+0.42%），VIX 24.56 绝对水位仍偏高，风险偏好未真正修复，压制大盘权重股估值扩张。",
+            "2026-11-18 估值风险：动态市盈率39.25、市净率45.70，处于偏高区间，业绩或指引任何不及预期都会放大回撤。",
+            "2026-11-18 技术数据风险：行情为降级数据源（fallback）、技术指标为部分可用（partial），量比与换手率缺失，量价判断精度受限。"
+          ],
+          "positive_catalysts": [
+            "2026-11-18 技术面：MA5>MA10>MA20 多头排列，价格回踩MA5（乖离-0.34%），符合回踩买点结构。",
+            "2026-09-30 报告期基本面：单季营收1144.77亿美元、归母净利润307.11亿美元、经营现金流281.01亿美元，盈利与现金流依然稳健。",
+            "2026-11-18 Apple Store Online 推广 Apple Upgrade 分期租赁，有助于提升服务与硬件换机黏性（背景级，非重大催化）。"
+          ],
+          "earnings_outlook": "最近报告期（2026-09-30）营收1144.77亿美元、净利润307.11亿美元，经营现金流281.01亿美元，ROE 142.26%（高回购导致权益基数偏低），TTM股息率0.30%。近3日检索未见新的业绩预告或指引，下一财季指引仍为关键变量。",
+          "sentiment_summary": "公司层面消息真空、情绪中性偏暖，但大盘分化与VIX偏高使外部风险偏好偏谨慎。"
+        },
+        "battle_plan": {
+          "sniper_points": {
+            "ideal_buy": "理想买入点：352.00元（MA5下方回踩，乖离-0.3%附近）",
+            "secondary_buy": "次优买入点：350.80元（MA10支撑处）",
+            "stop_loss": "止损位：346.50元（跌破MA20 347.49并留1%缓冲）",
+            "take_profit": "目标位：356.40元（今日高点），第二目标360.00元（整数关口）"
+          },
+          "position_strategy": {
+            "suggested_position": "建议仓位：3成（大盘谨慎环境下的轻仓上限）",
+            "entry_plan": "第一批2成在352.00附近（回踩MA5缩量止跌）；第二批1成在350.80（MA10）确认支撑后补入；若直接放量冲破356.40且量比明显放大，可用1成追随突破，不追高于358以上。",
+            "risk_control": "单笔亏损上限设为入场价的2%（约346.50止损）；收盘跌破MA20即减半仓，跌破346.50清仓；大盘VIX升破28或纳指转弱则暂停加仓。"
+          },
+          "action_checklist": [
+            "✅ 检查项1：多头排列 MA5>MA10>MA20 成立",
+            "✅ 检查项2：乖离率 -0.34%，处于安全买点区间（未超5%）",
+            "⚠️ 检查项3：量能为昨日0.66倍，缩量整理但缺放量确认",
+            "✅ 检查项4：近3日无减持、处罚、业绩变脸等公司级利空",
+            "⚠️ 检查项5：筹码分布数据缺失，无法验证集中度与获利盘",
+            "⚠️ 检查项6：动态PE 39.25、PB 45.70 偏高，估值容错空间小"
+          ]
+        },
+        "phase_decision": {
+          "phase_context": {
+            "phase": "postmarket",
+            "market": "us",
+            "market_local_time": "2026-11-18T20:22:44.879312-05:00",
+            "session_date": "2026-11-18",
+            "effective_daily_bar_date": "2026-11-18",
+            "is_trading_day": true,
+            "is_market_open_now": false,
+            "is_partial_bar": false,
+            "minutes_to_open": null,
+            "minutes_to_close": null,
+            "trigger_source": "cli",
+            "analysis_intent": "auto",
+            "warnings": []
+          },
+          "action_window": "盘后复盘",
+          "immediate_action": "等待确认",
+          "watch_conditions": [
+            "次日能否站稳MA5（353.66），站稳则回踩买点有效",
+            "回踩350.83（MA10）时是否缩量止跌，缩量不破为佳",
+            "成交量能否回升至1倍均量以上配合向上突破356.42",
+            "大盘VIX能否回落至24以下、纳指与道指走势是否重新同向"
+          ],
+          "next_check_time": "2026-11-19 09:30 ET（美东开盘）后30分钟内复核开盘价与量能",
+          "confidence_reason": "行情数据为降级源（fallback）、技术指标部分可用（partial）、筹码分布缺失，只具备日线级别的趋势可信度，故置信度定为中而非高。",
+          "data_limitations": [
+            "行情为 fallback 降级数据，实时性不足",
+            "技术指标 partial（含盘中叠加），量比与换手率缺失",
+            "筹码分布缺失，无法评估获利盘与集中度",
+            "近3日新闻有效信息含量低，无公司级催化或利空",
+            "quote: fallback"
+          ]
+        },
+        "signal_attribution": {
+          "technical_indicators": 41,
+          "news_sentiment": 11,
+          "fundamentals": 31,
+          "market_conditions": 17,
+          "strongest_bullish_signal": "多头排列下缩量回踩MA5（乖离-0.34%）",
+          "strongest_bearish_signal": "大盘指数分化、VIX 24.56偏高，量能未放大"
+        },
+        "decision_score_calibration": {
+          "scale_version": "decision-scale-v1",
+          "score": 66,
+          "score_band": "60-79",
+          "signal_key": "buy",
+          "canonical_action": "buy",
+          "canonical_decision_type": "buy",
+          "raw_score": 66,
+          "adjusted_score": 59,
+          "final_action": "hold",
+          "guardrail_reason": "市场资金流服务暂不支持，买入结论缺少资金面确认，先按观察处理。"
+        },
+        "decision_stability": {
+          "applied": true,
+          "reason": "市场资金流服务暂不支持，买入结论缺少资金面确认，先按观察处理。",
+          "current_price": 352.45,
+          "support": 350.83,
+          "resistance": 356.42,
+          "capital_flow_bias": "unavailable",
+          "capital_flow_status": "市场资金流服务暂不支持",
+          "raw_score": 66,
+          "adjusted_score": 59,
+          "final_action": "hold"
+        },
+        "sentiment_score": 59,
+        "operation_advice": "持有观察",
+        "decision_type": "hold"
+      },
+      "plan": {
+        "idealBuy": 352.0,
+        "secondaryBuy": 350.8,
+        "stopLoss": 346.5,
+        "takeProfit": 356.4
+      },
+      "createdAt": "2026-11-19 01:30:26.423264"
+    },
+    {
+      "code": "MARKET",
+      "name": "大盘复盘",
+      "reportType": "market_review",
+      "sentimentScore": 50,
+      "trendPrediction": "大盘复盘",
+      "operationAdvice": "查看复盘",
+      "action": null,
+      "actionLabel": null,
+      "confidenceLevel": "中",
+      "currentPrice": null,
+      "changePct": null,
+      "modelUsed": null,
+      "analysisSummary": "2026-11-19 大盘复盘",
+      "keyPoints": "",
+      "riskWarning": "",
+      "newsSummary": "## 2026-11-19 大盘复盘\n\n> 今日市场全线回落、创业板领跌，但成交额与涨跌家数数据缺失，核心矛盾是“指数走弱”与“量能、情绪无法验证”并存；明日优先观察上证3500附近承接和领跌板块是否继续扩散。\n\n### 一、盘面总览 📉\n\n主要指数全线收跌，创业板和深证成指跌幅大于上证，呈现“权重相对抗跌、成长承压”的偏弱结构。行业领涨方向涨幅均不足1%，而领跌方向跌幅接近4%，亏钱效应明显强于赚钱效应。由于涨跌家数、涨跌停及成交额均为0或缺失，无法确认市场宽度与量能状态，日内情绪只能定性为**偏弱、谨慎**，不能据此断言缩量下跌或恐慌释放。\n\n- **盘面信号**：47/100（震荡，需观察）\n- **信号依据**：主要指数平均涨跌幅 -0.64%\n- **操作建议**：信号分化，控制仓位并等待量价确认。\n\n### 二、指数结构\n\n上证指数回落至3573附近，仍处于3500—3600的整数关口区间内，3500可视作短期心理支撑，3600为上方第一压力观察位。上证50和沪深300跌幅相对有限，说明权重蓝筹对指数有一定托底作用，但托底力度不足以扭转方向。\n\n深证成指与创业板指同步走弱，创业板失守2300附近后，2300由支撑转为短期压力，成长方向是今日主要拖累。科创50同样回落，说明高风险偏好资产整体承压。各指数方向一致向下，尚未出现“权重护盘、成长独立走强”的分化，指数结构偏防守。\n\n关键观察：上证能否守住3500；创业板能否重新收复2300。若两者继续失守，指数将从“震荡回落”转向“防守确认”。\n\n| 指数 | 最新 | 涨跌幅 | 开盘 | 最高 | 最低 | 振幅 | 成交额(亿) |\n|------|------|--------|------|------|------|------|-----------|\n| 上证指数 | 3573.34 | 🔴 -0.40% | 3583.12 | 3583.12 | 3569.90 | 0.37% | 204 |\n| 深证成指 | 10590.38 | 🔴 -0.65% | 10591.73 | 10591.73 | 10583.27 | 0.08% | 208 |\n| 创业板指 | 2286.26 | 🔴 -1.10% | 2290.21 | 2290.21 | 2286.26 | 0.17% | 80 |\n| 科创50 | 1238.57 | 🔴 -0.76% | 1242.28 | 1242.28 | 1236.26 | 0.48% | 35 |\n| 上证50 | 2753.02 | 🔴 -0.42% | 2762.48 | 2762.48 | 2748.75 | 0.50% | 44 |\n| 沪深300 | 3963.59 | 🔴 -0.51% | 3972.43 | 3972.43 | 3959.10 | 0.33% | 127 |\n\n### 三、板块主线\n\n行业领涨集中在建筑安装、租赁和航空运输，涨幅分别仅约0.79%、0.55%和0.34%。这些方向更偏向低位、防御或政策预期交易，但涨幅小、内部龙头与持续性信息缺失，暂不能定义为可交易主线，只能视为弱市中的相对抗跌方向。\n\n领跌方向为渔业、影视录音制作和食品制造，跌幅分别约3.98%、3.59%和1.91%。领跌板块跌幅显著大于领涨板块，且集中在消费与传媒小市值方向，说明资金在收缩风险敞口，而非进行板块间良性轮动。\n\n概念题材数据缺失，无法判断是否存在题材主线或高位股分歧。综合看，今日没有形成清晰主线，建筑安装和航空运输的持续性需要明日验证；渔业、影视、食品制造若继续下跌，则需警惕弱势向其他消费和题材方向扩散。\n\n#### 行业板块领涨 Top 5\n| 排名 | 行业板块 | 涨跌幅 |\n|------|------|--------|\n| 1 | 建筑安装业 | +0.79% |\n| 2 | 租赁业 | +0.55% |\n| 3 | 航空运输业 | +0.34% |\n| 4 | 货币金融服务 | +0.24% |\n| 5 | 电力、热力生产和供应业 | +0.08% |\n\n#### 行业板块领跌 Top 5\n| 排名 | 行业板块 | 涨跌幅 |\n|------|------|--------|\n| 1 | 渔业 | -3.98% |\n| 2 | 广播、电视、电影和影视录音制作业 | -3.59% |\n| 3 | 食品制造业 | -1.91% |\n| 4 | 软件和信息技术服务业 | -1.80% |\n| 5 | 公共设施管理业 | -1.77% |\n\n### 四、资金与情绪\n\n成交额显示为0亿元，涨跌家数、涨停和跌停家数也均为0，属于明显的数据缺失或异常，不能解读为“极致缩量”或“情绪冰点”。因此，今日资金面和情绪面的量化判断受限，无法确认成交额是扩张还是收缩，也无法判断涨跌停结构和高位股分歧程度。\n\n可确认的只有价格信号：指数普跌、领跌板块跌幅较大，风险偏好边际下降。短线情绪更接近谨慎防守，而不是进攻。明日必须补看真实成交额、涨跌家数和涨停结构，才能判断今日是普通回调还是情绪退潮的开始。\n\n### 五、消息催化\n\n近三日新闻仅有一条东方财富股票频道首页链接，日期为2026-11-18，未提供具体政策、行业事件或公司信息，无法提炼出可验证的明日催化。事件驱动层面基本空白，这意味着明日交易更依赖技术面承接、量能变化和领跌板块是否收敛，而不是消息刺激。\n\n在缺少实质新闻的情况下，不宜对建筑安装、航空运输等领涨方向赋予过强事件逻辑；也不宜因单日领跌就臆测渔业、影视板块存在未披露利空。\n\n### 六、明日交易计划\n\n**结论：均衡偏防守。** 指数同向走弱，但权重相对抗跌，且量能与情绪数据缺失，暂不直接转为全面防守；应以控制仓位、等待确认主。\n\n- **仓位区间**：建议30%—50%，不宜在数据缺失日主动加仓。\n- **关注方向**：建筑安装、航空运输等今日相对抗跌方向能否延续；上证3500附近的承接力度；权重蓝筹是否继续托底。\n- **回避方向**：渔业、影视录音制作、食品制造等领跌方向，尤其在跌幅未收敛前不急于抄底；概念题材在数据缺失下暂不追高。\n- **触发失效条件**：若明日上证放量站上3600、创业板收复2300，且领涨板块扩散，则“偏防守”判断失效，可转为均衡偏进攻；若上证跌破3500且领跌板块继续扩散，则应进一步降低仓位。\n\n### 七、风险提示\n\n- 成交额、涨跌家数、涨跌停数据缺失，市场宽度和量能判断存在较大不确定性，明日需以真实数据修正结论。\n- 创业板失守2300后若无法快速收复，成长方向可能继续拖累市场。\n- 领跌板块跌幅较大，若向其他消费、传媒方向扩散，亏钱效应可能强化。\n- 近三日无实质性新闻催化，事件驱动空白，市场对外部扰动可能更敏感。\n- 单日板块涨跌不足以确认主线，领涨方向持续性仍需验证。\n\n建议仅供参考，不构成投资建议。",
+      "dashboard": null,
+      "plan": {
+        "idealBuy": null,
+        "secondaryBuy": null,
+        "stopLoss": null,
+        "takeProfit": null
+      },
+      "createdAt": "2026-11-19 01:33:31.715621"
+    }
+  ],
+  "crypto": [
+    {
+      "coin": "BTC",
+      "symbol": "BTC-USD",
+      "name": "比特币",
+      "price": 62424.4609375,
+      "prevClose": 64893.9453125,
+      "changePct": -3.81,
+      "trend": "TrendStatus.STRONG_BEAR",
+      "metrics": {
+        "现价": 62424.4609375,
+        "今日涨跌幅%": -3.81,
+        "MA5": 64321.47265625,
+        "MA10": 68410.733984375,
+        "MA20": 72671.8833984375,
+        "MA60": 79517.4763671875,
+        "RSI6": 13.607247038291476,
+        "RSI12": 19.602860774467104,
+        "MACD DIF": -4238.351647807169,
+        "MACD DEA": -3178.206992863752
+      },
+      "high20": 81079.7890625,
+      "low20": 62017.8828125,
+      "avgVol20": 29520911424.4,
+      "lastDate": "2026-11-19",
+      "markdown": "### 💭 一句话结论\n空头趋势延续；若跌破 62018，可能进一步走低；64320 附近有压力。\n\n### 📌 核心结论\n- 方向：看空\n- 评分：20\n- 风险提示：RSI6 仅 13.61，已处极度超卖，短线可能出现技术性反抽。\n\n### 📈 关键价位\n- 支撑：62017.88（依据：近 20 日最低）\n- 压力：64320（依据：MA5）\n- 失效条件：日线收盘重新站上 64320，则空头判断作废。\n\n### ⚡ 策略\n- 进场思路：等待反弹至 64320 附近后确认承压回落，或日线收盘有效跌破 62017.88 后再顺势跟进；不追空。\n- 止损参考：64320 上方（反弹做空时参考）\n- 目标位：62017.88；若跌破后的下一目标，数据缺失\n\n> 仅为技术面参考，不构成投资建议。"
+    },
+    {
+      "coin": "ETH",
+      "symbol": "ETH-USD",
+      "name": "以太坊",
+      "price": 1768.0799560546875,
+      "prevClose": 1822.9613037109375,
+      "changePct": -3.01,
+      "trend": "TrendStatus.STRONG_BEAR",
+      "metrics": {
+        "现价": 1768.0799560546875,
+        "今日涨跌幅%": -3.01,
+        "MA5": 1802.986572265625,
+        "MA10": 1919.6907104492188,
+        "MA20": 2086.725225830078,
+        "MA60": 2387.4091979980467,
+        "RSI6": 19.484801412770096,
+        "RSI12": 23.21572433487151,
+        "MACD DIF": -154.29484831165655,
+        "MACD DEA": -125.53271211620043
+      },
+      "high20": 2446.0478515625,
+      "low20": 1712.3831787109375,
+      "avgVol20": 11959063662.55,
+      "lastDate": "2026-11-19",
+      "markdown": "### 💭 一句话结论\n空头排列压制， ETH 价格在均线下方反抽，弱势格局下看向 1712 前低。\n\n### 📌 核心结论\n- 方向：看空\n- 评分：25\n- 一句风险提示：RSI6 已降至 19.48，处于严重超卖区间，因此随时可能出现急促的技术性反抽，追空风险较高。\n\n### 📈 关键价位\n- 支撑：1712.38（依据：近 20 日最低，也是前低）\n- 压力：1803（依据：MA5；其上为 1920 的 MA10 以及 1822.96 的昨收）\n- 失效条件：如果日线收盘重新站上 MA5（约 1803）并企稳，则空头判断作废。\n\n### ⚡ 策略\n- 进场思路：不追跌；等价格反抽到 MA5（约 1800-1810）区域后，出现滞涨或长上影的拒绝信号，再考虑入场；或者等待价格放量跌破 1712.38 后回抽确认。\n- 止损参考：1830（MA5 上方并覆盖昨收区域）\n- 目标位：1712.38；若跌破前低，再看更下方的价格区间（点位数据缺失）\n\n> 仅为技术面参考，不构成投资建议。"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1795052051835,
+  "generatedAt": 1795114990993,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
@@ -7,9 +7,8 @@
       "name": "report_20261119.md",
       "path": "report_20261119.md",
       "date": "2026-11-19",
-      "updatedAt": 1795052051834,
+      "updatedAt": 1795114990992,
       "symbols": [
-        "AAPL",
         "APLD",
         "BTC",
         "ETH",
@@ -25,7 +24,7 @@
       "name": "report_20261118.md",
       "path": "report_20261118.md",
       "date": "2026-11-18",
-      "updatedAt": 1795052051834,
+      "updatedAt": 1795114990991,
       "symbols": [
         "AAPL",
         "APLD",
@@ -43,7 +42,7 @@
       "name": "report_20261117.md",
       "path": "report_20261117.md",
       "date": "2026-11-17",
-      "updatedAt": 1795052051834,
+      "updatedAt": 1795114990991,
       "symbols": [
         "AAPL",
         "APLD",
@@ -61,7 +60,7 @@
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1795052051834,
+      "updatedAt": 1795114990991,
       "symbols": [
         "AAPL",
         "APLD",
@@ -77,28 +76,28 @@
       "name": "market_review_20261119.md",
       "path": "market_review_20261119.md",
       "date": "2026-11-19",
-      "updatedAt": 1795052051834,
+      "updatedAt": 1795114990991,
       "symbols": []
     },
     {
       "name": "market_review_20261118.md",
       "path": "market_review_20261118.md",
       "date": "2026-11-18",
-      "updatedAt": 1795052051834,
+      "updatedAt": 1795114990991,
       "symbols": []
     },
     {
       "name": "market_review_20261117.md",
       "path": "market_review_20261117.md",
       "date": "2026-11-17",
-      "updatedAt": 1795052051833,
+      "updatedAt": 1795114990991,
       "symbols": []
     },
     {
       "name": "market_review_20261116.md",
       "path": "market_review_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1795052051833,
+      "updatedAt": 1795114990990,
       "symbols": []
     }
   ]

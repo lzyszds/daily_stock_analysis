@@ -1,13 +1,32 @@
 {
-  "generatedAt": 1795552732152,
+  "generatedAt": 1795636480224,
   "reportsPath": ".dsa",
   "source": "action",
   "reports": [
     {
+      "name": "report_20261125.md",
+      "path": "report_20261125.md",
+      "date": "2026-11-25",
+      "updatedAt": 1795636480222,
+      "symbols": [
+        "AAPL",
+        "APLD",
+        "BTC",
+        "ETH",
+        "MSFT",
+        "MU",
+        "NVDA",
+        "RED",
+        "SNDK",
+        "SPCX"
+      ],
+      "dataPath": "report_20261125.json"
+    },
+    {
       "name": "report_20261124.md",
       "path": "report_20261124.md",
       "date": "2026-11-24",
-      "updatedAt": 1795552732150,
+      "updatedAt": 1795636480222,
       "symbols": [
         "AAPL",
         "APLD",
@@ -26,7 +45,7 @@
       "name": "report_20261123.md",
       "path": "report_20261123.md",
       "date": "2026-11-23",
-      "updatedAt": 1795552732150,
+      "updatedAt": 1795636480222,
       "symbols": [
         "AAPL",
         "APLD",
@@ -45,7 +64,7 @@
       "name": "report_20261120.md",
       "path": "report_20261120.md",
       "date": "2026-11-20",
-      "updatedAt": 1795552732150,
+      "updatedAt": 1795636480221,
       "symbols": [
         "AAPL",
         "APLD",
@@ -63,7 +82,7 @@
       "name": "report_20261119.md",
       "path": "report_20261119.md",
       "date": "2026-11-19",
-      "updatedAt": 1795552732150,
+      "updatedAt": 1795636480221,
       "symbols": [
         "APLD",
         "BTC",
@@ -80,7 +99,7 @@
       "name": "report_20261118.md",
       "path": "report_20261118.md",
       "date": "2026-11-18",
-      "updatedAt": 1795552732150,
+      "updatedAt": 1795636480221,
       "symbols": [
         "AAPL",
         "APLD",
@@ -98,7 +117,7 @@
       "name": "report_20261117.md",
       "path": "report_20261117.md",
       "date": "2026-11-17",
-      "updatedAt": 1795552732149,
+      "updatedAt": 1795636480221,
       "symbols": [
         "AAPL",
         "APLD",
@@ -116,7 +135,7 @@
       "name": "report_20261116.md",
       "path": "report_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1795552732149,
+      "updatedAt": 1795636480221,
       "symbols": [
         "AAPL",
         "APLD",
@@ -129,52 +148,59 @@
       ]
     },
     {
+      "name": "market_review_20261125.md",
+      "path": "market_review_20261125.md",
+      "date": "2026-11-25",
+      "updatedAt": 1795636480220,
+      "symbols": []
+    },
+    {
       "name": "market_review_20261124.md",
       "path": "market_review_20261124.md",
       "date": "2026-11-24",
-      "updatedAt": 1795552732149,
+      "updatedAt": 1795636480220,
       "symbols": []
     },
     {
       "name": "market_review_20261123.md",
       "path": "market_review_20261123.md",
       "date": "2026-11-23",
-      "updatedAt": 1795552732149,
+      "updatedAt": 1795636480220,
       "symbols": []
     },
     {
       "name": "market_review_20261120.md",
       "path": "market_review_20261120.md",
       "date": "2026-11-20",
-      "updatedAt": 1795552732149,
+      "updatedAt": 1795636480220,
       "symbols": []
     },
     {
       "name": "market_review_20261119.md",
       "path": "market_review_20261119.md",
       "date": "2026-11-19",
-      "updatedAt": 1795552732148,
+      "updatedAt": 1795636480220,
       "symbols": []
     },
     {
       "name": "market_review_20261118.md",
       "path": "market_review_20261118.md",
       "date": "2026-11-18",
-      "updatedAt": 1795552732148,
+      "updatedAt": 1795636480220,
       "symbols": []
     },
     {
       "name": "market_review_20261117.md",
       "path": "market_review_20261117.md",
       "date": "2026-11-17",
-      "updatedAt": 1795552732148,
+      "updatedAt": 1795636480220,
       "symbols": []
     },
     {
       "name": "market_review_20261116.md",
       "path": "market_review_20261116.md",
       "date": "2026-11-16",
-      "updatedAt": 1795552732148,
+      "updatedAt": 1795636480219,
       "symbols": []
     }
   ]
